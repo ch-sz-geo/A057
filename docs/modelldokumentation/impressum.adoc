@@ -1,0 +1,44 @@
+[discrete]
+=== Impressum
+
+.Erstellung
+[%collapsible]
+====
+[cols="1, 3"]
+|=======
+|Erstelldatum | 24.01.2024
+|letzte Änderung | {docdate}
+| ID nach kGeoiV | --- 
+| Themen-Nummer | Annn
+| Beteiligte | Person 1 (Kürzel 1), Amt 1 + 
+Person 2 (Kürzel 2), Amt 2
+| Status a| - [ ] Entwurf 
+- [ ] bereit für Vernehmlassung
+- [x] gültig
+|=======
+====
+
+.Koreferat
+[%collapsible]
+====
+[cols="10%, 10%, 10%, 70%"]
+|=======
+h| Version h| Datum h| Koreferent h| Prüfstelle
+| 1.0 | 01.01.2001 | xy | Amt A
+|=======
+====
+
+.referenzierte Dokumente
+[%collapsible]
+====
+[cols="10%, 70%, 10%, 10%"]
+|=======
+h| Nr. h| Titel h| Autor(en) h| Version
+| [01] | Kantonales Geoinformationsgesetz (KGeoiG) (SRSZ 214.110) | Kt. SZ | 24.06.2010
+| [02] | Verordnung zum kantonalen Geoinformationsgesetz (KGeoiV) (SRSZ 214.111) | Kt. SZ | 18.12.2012
+|=======
+====
+
+ifdef::backend-pdf[]
+<<<
+endif::[]

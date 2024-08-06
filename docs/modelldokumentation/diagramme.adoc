@@ -1,9 +1,9 @@
 == Diagramme
 === Komponentendiagramm
-image::../img/Komponentendiagramm.JPG[]
+image::../img/SZ_Waldfeststellungen_V2_Komponentendiagramm.png[]
 
 === Klassendiagramm
-image::../img/Klassendiagramm.JPG[]
+image::../img/SZ_Waldfeststellungen_V2_Klassendiagramm.png[]
 
 ifdef::backend-pdf[]
 <<<

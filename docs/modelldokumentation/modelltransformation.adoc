@@ -1,26 +1,68 @@
 == Modelltransformationen
 === Transformation ins minimale Geodatenmodell des Bundes
-Zielmodell: Waldgrenzen_V1_2 (Version: 2023-03-20) http://models.geo.admin.ch/BAFU/Waldgrenzen_V1_2.ili
+* Quellmodell: Das hier beschriebene Datenmodell
+* Zielmodell: http://models.geo.admin.ch/BAFU/Waldgrenzen_V1_2.ili[Waldgrenzen_V1_2] (Version: 2023-03-20)
 
-=== Transformation ins Transfermodell des ÖREB-Katasters
-Zielmodell: todo
+=== Transformation ins Transfermodell ÖREB-Kataster
+* Quellmodell: Das hier beschriebene Datenmodell
+* Zielmodell: https://models.geo.admin.ch/V_D/OeREB/OeREBKRMtrsfr_V2_0.ili[OeREBKRMtrsfr_V2_0] (Version: 2021-04-14)
 
-[cols="1,1,3"]
-|=======
-h| Code h| Abkürzung h| Bezeichnung
-| 61.1.1 | rGP | Gestaltungsplan "Dörfli"
-| 61.1.2 | rGP | Gestaltungsplan "Freihof"
-| ... | ... | ...
-| 61.1.11 | rGP | Gestaltungsplan "Freihof West"
-|=======
-
-[cols=2*,options="header",cols="25,75"]
+==== Klasse `+DarstellungsDienst+`
+[cols=2*,options="header"]
 |===
-| heading column 1
-| heading column 2
-| row 1 column 1 | row 1 column 2
-| row 2 column 1 | row 2 column 2
+| Quellattribut | Zielattribut
+| todo: kontrollieren
+
+`+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
+| `+VerweisWMS+`
 |===
+
+==== Klasse `+Eigentumsbeschraenkung+`
+[cols=2*m,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo | Rechtsstatus
+| todo | publiziertAb
+| todo | publiziertBis
+|===
+
+
+==== Klasse `+Geometrie+`
+[cols=2*m,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo | Punkt
+| todo | Linie
+| todo | Flaeche
+| todo | Rechtsstatus
+| todo | publiziertAb
+| todo | publiziertBis
+| todo | MetadatenGeobasisdaten
+|===
+
+==== Klasse `+LegendeEintrag+`
+[cols=2*m,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo | Symbol
+| todo | LegendeText
+| todo | ArtCode
+| todo | ArtCodeliste
+| todo | Thema
+| - - - | SubThema
+|===
+
+
+
+[cols="e,m,^,>s",width="25%"]
+|===
+|1 >s|2 |3 |4
+^|5 2.2+^.^|6 .3+<.>m|7
+^|8
+|9 2+>|10
+|===
+
+
 
 ifdef::backend-pdf[]
 <<<

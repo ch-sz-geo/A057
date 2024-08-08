@@ -1,6 +1,6 @@
 // Hier den Titel eingeben
 :title: Modelldokumentation 
-:subtitle: <Untertitel der Dokumentation>
+:subtitle: Waldgrenzen A057
 ifdef::backend-pdf[]
 = {title}
 {subtitle}

@@ -79,11 +79,143 @@ m| Bemerkung
 | Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.
 | öffentlich
 m| Symbol
-| Bild des Legendeneintrage; codiert als Base64-Wert
+| Bild des Legendeneintrages; codiert als Base64-Wert
 | iVBORw0KGg... (abgeschnitten)
 | öffentlich
 |===
 
+=== Topic `+Waldfeststellung+`
+Das Topic `+Waldfeststellung+` umfasst die eigentlichen, fachlichen Klassen des Themas.
+
+==== Klasse `+Waldgrenze+`
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| intern
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| intern
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| intern
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| intern
+m| gueltigVon
+| Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
+| 2024-01-01
+| öffentlich
+m| gueltigBis
+| Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
+| 2030-12-31
+| öffentlich
+m| Waldabstand
+| Distanz von Bauten und Anlagen zur statischen Waldgrenze in Meter. Im Normalfall 15.
+| 15
+| öffentlich
+m| Nebenbautenabstand
+| Distanz von Nebenbauten zur statischen Waldgrenze in Meter.
+| 10
+| öffentlich
+m| Rodungsnummer
+| Nummer, welche eine Rodung kennzeichnet; dies dann, falls die Waldgrenze aufgrund einer Rodung bestimmt wurde
+| RO123
+| öffentlich
+m| BemerkungIntern
+| interne Bemerkung zum Objekt, die nur für die zuständige Stelle einsehbar ist
+| Das ist eine interne Bemerkung
+| intern
+m| Bemerkung
+| öffentliche Bemerkung zum Objekt
+| Das ist eine öffentliche Bemerkung
+| öffentlich
+4+| *Geometrie*
+m| Geometrie
+| Geometrie der Waldgrenze als Linie
+| (ohne Beispiel)
+| öffentlich
+|===
+
+
+==== Klasse `+Stockgrenze+`
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| intern
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| intern
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| intern
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| intern
+m| Bemerkung
+| Bemerkung zum Objekt
+| Das ist eine Bemerkung
+| öffentlich
+4+| *Geometrie*
+m| Geometrie
+| Geometrie der Stockgrenze als Linie
+| (ohne Beispiel)
+| öffentlich
+|===
+
+==== Klasse `+Wirkbereich+`
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| intern
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| intern
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| intern
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| intern
+m| Bemerkung
+| Bemerkung zum Objekt
+| Das ist eine Bemerkung
+| öffentlich
+4+| *Geometrie*
+m| Geometrie
+| Geometrie des Wirkbereichs als Fläche
+| (ohne Beispiel)
+| öffentlich
+|===
 
 ifdef::backend-pdf[]
 <<<

@@ -88,6 +88,7 @@ m| Symbol
 Das Topic `+Waldfeststellung+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
 ==== Klasse `+Waldgrenze+`
+Die Klasse `+Waldgrenze+` führt die statisch festgelegten Waldgrenzen als Linien. In Abhängigkeit ihres Typs und des Rechtsstatus gelangen diese Objekte auch in den ÖREB-Kataster.
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
@@ -146,8 +147,8 @@ m| Geometrie
 | öffentlich
 |===
 
-
 ==== Klasse `+Stockgrenze+`
+Objekte der Klasse `+Stockgrenze+` erden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Strockgrenzen die Waldgrenzen abgeleitet. 
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
@@ -183,6 +184,7 @@ m| Geometrie
 |===
 
 ==== Klasse `+Wirkbereich+`
+Wirkbereiche sind Flächen entlang von statischen Waldgrenzen, in denen ein Bauverbot gilt. Die Wirkbereiche wurden eingeführt, damit der ÖREB-Katasterauszug korrekte Resultate ausweist. Eine statische Waldgrenze kanpp ausserhalb eines Grundstückes wird nur über den Verschnitt mit dem Wirkbereich korrekt als Eigentumsbeschränkung erkannt, nicht aber mit der Liniengeometrie.
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe

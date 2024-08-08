@@ -1,26 +1,89 @@
 == Klassenbeschreibung
 === Topic `+Stammdaten+`
-INTERLIS kennt den Datentyp «Aufzählung», bei dem die Werte im Modell definiert werden. Änderungen an dieser Werteliste (z.B. Umbenennung, Hinzufügen oder Streichen) führen zu Änderungen am Datenmodell und damit zu hohem Nachführungsaufwand. Um dem entgegenzuwirken, sind neu alle Aufzählwerte als Stammdaten im gleichnamigen Topic modelliert. Jede Aufzählung erhält eine eigene Klasse. Die Summe aller Einträge einer Klasse bildet den Umfang der Aufzählung. Durch dieses Modellierungsmuster bleibt das Datenmodell bei Änderungen der Werteliste unverändert. +
+Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (in INTERLIS wäre das der Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert. +
 
-Die Daten des Topics +Stammdaten+ werden zur Verfügung gestellt und sind statisch. Sie dürfen NICHT verändert werden. Die Nachführung der Kataloge erfolgt stets durch die katasterverantwortliche Stelle.
+Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf nachgeführt. Die Stammdaten werden durch die Abteilung Geoinformation im Internet veröffentlicht.
 
-==== Klasse Katalogeintrag
-Die Klasse +Katalogeintrag+ enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt damit keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen. +
+==== Klasse `+Katalogeintrag+`
+Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt damit keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen. +
 
 Allgemeingültige Attributbeschreibungen sind auf der Klasse +Katalogeintrag+ aufgeführt. Detailliertere Angaben zu den Attributen sind bei den jeweiligen Klassen zu finden.
 
-[cols="10%, 90%"]
-|======
-2+h| Allgemeines
-| Vererbung | Die Attribute dieser Klasse werden vererbt.
-| Objektkennung | Objekte dieser Klasse weisen eine eineindeutige, über die Zeit stabile Objektidentifikation (OID) vom Typ UUID auf. Es sind die Regeln gemäss INTERLIS-Referenzhandbuch zu beachten
-|======
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| Code
+| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
+| in_Aenderung
+| öffentlich
+m| Name
+| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
+| in Änderung
+| öffentlich
+m| SortierNr
+| Reihenfolge des Katalogeintrages in der Auswahlliste
+| 1
+| öffentlich
+m| Bemerkung
+| Erläuterung, welche den Katalogeintrag näher beschreibt
+| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
+| öffentlich
+|===
 
+==== Klasse `+Verbindlichkeit+`
+Die Verbindlichkeit kam mit der Aufnahme der statischen Waldgrenzen in den ÖREB-Kataster.
 
-[%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
-|=======
-include::../table/klasse_katalogeintrag.csv[]
-|=======
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Typ+`
+Über den Typ wird die Art der Geometrie festgelegt.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| Code
+| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
+| ausserhalb_Bauzonen_statisch
+| öffentlich
+m| Name
+| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
+| Waldgrenze ausserhalb Bauzone (statisch)
+| öffentlich
+m| Abkuerzung
+| Kurzform des Katalogeintrages
+| WGraB_s
+| öffentlich
+m| SortierNr
+| Reihenfolge des Katalogeintrages in der Auswahlliste
+| 2
+| öffentlich
+m| Bemerkung
+| Erläuterung, welche den Katalogeintrag näher beschreibt
+| Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.
+| öffentlich
+m| Symbol
+| Bild des Legendeneintrage; codiert als Base64-Wert
+| iVBORw0KGg... (abgeschnitten)
+| öffentlich
+|===
+
 
 ifdef::backend-pdf[]
 <<<

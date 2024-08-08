@@ -18,38 +18,50 @@
 |===
 
 ==== Klasse `+Eigentumsbeschraenkung+`
-[cols=2*m,options="header"]
+[cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| todo | Rechtsstatus
-| todo | publiziertAb
-| todo | publiziertBis
+| Der Wert für `+Rechtsstatus+` wird regelbasiert abgeleitet (siehe unten) | `+Rechtsstatus+`
+| Datum, an dem die Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt m| publiziertAb
+| (aktuell nicht verwendet und daher leer) m| publiziertBis
 |===
 
+Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
+|===
+h| Regel h| Rechtsstatus
+a| (`+Waldgrenze.gueltigVon+` IS NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NULL AND `+Waldgrenze.rAufhebung+` IS NULL)
+
+OR
+
+(`+Waldgrenze.gueltigVon+` IS NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NULL AND `+Waldgrenze.rAufhebung+` IS NOT NULL) | `+laufendeAenderung_Begruendung+`
+| `+Waldgrenze.gueltigVon+` IS NOT NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NOT NULL AND `+Waldgrenze.rAufhebung+` IS NULL | `+inKraft+`
+| `+Waldgrenze.gueltigVon+` IS NOT NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NOT NULL AND `+Waldgrenze.rAufhebung+` IS NOT NULL | `+laufendeAenderung_Aufhebung+`
+| `+Waldgrenze.gueltigVon+` IS NOT NULL AND `+Waldgrenze.gueltigBis+` IS NOT NULL AND `+Waldgrenze.rBegruendung+` IS NOT NULL AND `+Waldgrenze.rAufhebung+` IS NOT NULL | `+inKraft_Aufhebung+`
+|===
 
 ==== Klasse `+Geometrie+`
-[cols=2*m,options="header"]
+[cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| todo | Punkt
-| todo | Linie
-| todo | Flaeche
-| todo | Rechtsstatus
-| todo | publiziertAb
-| todo | publiziertBis
-| todo | MetadatenGeobasisdaten
+| - - - m| Punkt
+m| Waldgrenze.Geometrie m| Linie
+| - - - m| Flaeche
+| analog `+Eigentumsbeschraenkung.Rechtsstatus+` m| Rechtsstatus
+| analog `+Eigentumsbeschraenkung.publiziertAb+` m| publiziertAb
+| analog `+Eigentumsbeschraenkung.publiziertBis+` m| publiziertBis
+| https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/8646c41b-543e-401f-836d-4b6beca7370d[Link auf GeoCat] m| MetadatenGeobasisdaten
 |===
 
 ==== Klasse `+LegendeEintrag+`
-[cols=2*m,options="header"]
+[cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| todo | Symbol
-| todo | LegendeText
-| todo | ArtCode
-| todo | ArtCodeliste
-| todo | Thema
-| - - - | SubThema
+m| Typ.Symbol m| Symbol
+m| Typ.Name m| LegendeText
+m| Typ.Code m| ArtCode
+m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
+| fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
+| - - - m| SubThema
 |===
 
 

@@ -212,9 +212,18 @@ th {
 </li>
 <li><a href="#_klassenbeschreibung">4. Klassenbeschreibung</a>
 <ul class="sectlevel2">
-<li><a href="#_topic_stammdaten">4.1. Topic Stammdaten</a>
+<li><a href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a>
 <ul class="sectlevel3">
-<li><a href="#_klasse_katalogeintrag">4.1.1. Klasse Katalogeintrag</a></li>
+<li><a href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></li>
+<li><a href="#_klasse_verbindlichkeit">4.1.2. Klasse <code>Verbindlichkeit</code></a></li>
+<li><a href="#_klasse_typ">4.1.3. Klasse <code>Typ</code></a></li>
+</ul>
+</li>
+<li><a href="#_topic_waldfeststellung">4.2. Topic <code>Waldfeststellung</code></a>
+<ul class="sectlevel3">
+<li><a href="#_klasse_waldgrenze">4.2.1. Klasse <code>Waldgrenze</code></a></li>
+<li><a href="#_klasse_stockgrenze">4.2.2. Klasse <code>Stockgrenze</code></a></li>
+<li><a href="#_klasse_wirkbereich">4.2.3. Klasse <code>Wirkbereich</code></a></li>
 </ul>
 </li>
 </ul>
@@ -249,7 +258,7 @@ th {
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p><span class="subtitle">Waldfeststellungen (A057);</span><br></p>
+<p><span class="subtitle">Waldgrenzen (A057)</span><br></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -259,7 +268,7 @@ th {
 <p><a href="https://ch-sz-geo.github.io/A000_entrypage/">zur Startseite</a><br></p>
 </li>
 <li>
-<p><a href="https://amandawetter.github.io/A000_Rebuild/">Übersicht A057 Dokumentation</a><br></p>
+<p><a href="https://amandawetter.github.io/A000_Rebuild/">Übersicht AXXX Dokumentation</a><br></p>
 </li>
 <li>
 <p><a href="https://amandawetter.github.io/A000_Rebuild/docs/modelldokumentation.pdf">Dokumentation als Pdf</a><br></p>
@@ -284,7 +293,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-08-08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-08-09</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -388,13 +397,12 @@ Christoph Angst (Cha), AWN</p></td>
 <div class="sect2">
 <h3 id="_rechtliche_grundlagen"><a class="anchor" href="#_rechtliche_grundlagen"></a><a class="link" href="#_rechtliche_grundlagen">1.1. Rechtliche Grundlagen</a></h3>
 <div class="paragraph">
-<p>Seit dem 1. Juli 2008 ist das Bundesgesetz über Geoinformation (GeoIG) in Kraft. Am 1. Juli 2012
-erfolgte die vollständige Inkraftsetzung des kantonalen Geoinformationsgesetzes (KGeoiG) [01]. Es hat
-zum Ziel, verbindliche Vorgaben für die Erfassung, Modellierung und den Austausch von Geodaten
-festzulegen.<br></p>
+<p>Seit dem 1. Juli 2008 ist das <a href="https://www.fedlex.admin.ch/eli/cc/2008/388/de">Bundesgesetz über Geoinformation (GeoIG)</a> in Kraft. Am 1. Juli 2012
+erfolgte die vollständige Inkraftsetzung des <a href="https://www.sz.ch/public/upload/assets/48275/214_110.pdf?fp=2">kantonalen Geoinformationsgesetzes (KGeoiG)</a>. Es hat
+zum Ziel, verbindliche Vorgaben für die Erfassung, Modellierung und den Austausch von Geodaten festzulegen.</p>
 </div>
 <div class="paragraph">
-<p>Am 1. Januar 2013 trat die kantonale Verordnung über Geoinformation (KGeoiV) in Kraft [02]. Sie
+<p>Am 1. Januar 2013 trat die <a href="https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11">kantonale Verordnung über Geoinformation (KGeoiV)</a> in Kraft. Sie
 präzisiert das KGeoiG in fachlicher sowie technischer Hinsicht und führt im Anhang 1 „Katalog der
 Geobasisdaten des Bundesrechts mit Zuständigkeit beim Kanton“ und im Anhang 2 „Katalog der
 Geobasisdaten des kantonalen Rechts“. Darin werden die Fachstellen definiert, welche für die
@@ -409,20 +417,28 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><em>&lt;Name des Datensatzes&gt;</em>.<br></p>
+<p><strong>statische Waldgrenzen.</strong><br></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p><em>&lt;weitere Beschreibungen&gt;</em><br></p>
 </div>
 <div class="paragraph">
 <p>Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters.<br></p>
 </div>
 <div class="paragraph">
-<p>Diese Dokumentation richtet sich an Behörden und Fachleute des Kantons und der Gemeinden sowie
-an private Planungsbüros und GIS-Dienstleister, welche sich mit der Bearbeitung von Geobasisdaten
-zu Gestaltungsplänen befassen.<br></p>
+<p>Diese Dokumentation richtet sich an:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Personen der zuständigen kantonalen Fachstelle,</strong> um das Thema zu beschreiben und die Dokumentation aktuell zu halten,</p>
+</li>
+<li>
+<p><strong>Personen der Geoinformation,</strong> um Daten nach diesem Modell abzugeben oder in andere Modelle zu transformieren sowie</p>
+</li>
+<li>
+<p><strong>Dritte,</strong> um sich über das Thema zu informieren.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -567,84 +583,418 @@ Gestaltungsplan" den Namen des Gestaltungsplans enthalten, vgl. Beispiele in nac
 <h2 id="_klassenbeschreibung"><a class="anchor" href="#_klassenbeschreibung"></a><a class="link" href="#_klassenbeschreibung">4. Klassenbeschreibung</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">4.1. Topic Stammdaten</a></h3>
+<h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a></h3>
 <div class="paragraph">
-<p>INTERLIS kennt den Datentyp «Aufzählung», bei dem die Werte im Modell definiert werden. Änderungen an dieser Werteliste (z.B. Umbenennung, Hinzufügen oder Streichen) führen zu Änderungen am Datenmodell und damit zu hohem Nachführungsaufwand. Um dem entgegenzuwirken, sind neu alle Aufzählwerte als Stammdaten im gleichnamigen Topic modelliert. Jede Aufzählung erhält eine eigene Klasse. Die Summe aller Einträge einer Klasse bildet den Umfang der Aufzählung. Durch dieses Modellierungsmuster bleibt das Datenmodell bei Änderungen der Werteliste unverändert.<br></p>
+<p>Das Topic <code>Stammdaten</code> umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (in INTERLIS wäre das der Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert.<br></p>
 </div>
 <div class="paragraph">
-<p>Die Daten des Topics Stammdaten werden zur Verfügung gestellt und sind statisch. Sie dürfen NICHT verändert werden. Die Nachführung der Kataloge erfolgt stets durch die katasterverantwortliche Stelle.</p>
+<p>Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf nachgeführt. Die Stammdaten werden durch die Abteilung Geoinformation im Internet veröffentlicht.</p>
 </div>
 <div class="sect3">
-<h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">4.1.1. Klasse Katalogeintrag</a></h4>
+<h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse Katalogeintrag enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt damit keine Objekte Katalogeintrag, sondern nur Objekte von den spezialisierten Klassen.<br></p>
+<p>Die Klasse <code>Katalogeintrag</code> enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt damit keine Objekte Katalogeintrag, sondern nur Objekte von den spezialisierten Klassen.<br></p>
 </div>
 <div class="paragraph">
 <p>Allgemeingültige Attributbeschreibungen sind auf der Klasse Katalogeintrag aufgeführt. Detailliertere Angaben zu den Attributen sind bei den jeweiligen Klassen zu finden.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 90%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Allgemeines</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Vererbung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Die Attribute dieser Klasse werden vererbt.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Objektkennung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Objekte dieser Klasse weisen eine eineindeutige, über die Zeit stabile Objektidentifikation (OID) vom Typ UUID auf. Es sind die Regeln gemäss INTERLIS-Referenzhandbuch zu beachten</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 60%;">
-<col style="width: 10%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Attribute</th>
-<th class="tableblock halign-left valign-top">Anzahl</th>
-<th class="tableblock halign-left valign-top">Typ</th>
+<th class="tableblock halign-left valign-top">Name</th>
 <th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
 <th class="tableblock halign-left valign-top">Freigabe</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Katalogeintrages; entspricht dem Wert der Aufzählung in einem INTERLIS-Modell. Der Code beinhaltet den "Wert für die Maschine" und dient z.B. zur Steuerung einer Applikation (z.B. Farbvergabe); Änderungen am Code sind mit allen Parteien, die am Datenaustausch beteiligt sind, abzusprechen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">für den Benutzer lesbarer Name des Katalogeintrages Der Name beinhaltet den Wert "für den Menschen".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in_Aenderung</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SortierNr</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Die Sortiernummer bestimmt die Position eines Wertes in der Liste: je tiefer die Zahl, desto weiter oben steht der Wert in der Liste.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in Änderung</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterungen zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_verbindlichkeit"><a class="anchor" href="#_klasse_verbindlichkeit"></a><a class="link" href="#_klasse_verbindlichkeit">4.1.2. Klasse <code>Verbindlichkeit</code></a></h4>
+<div class="paragraph">
+<p>Die Verbindlichkeit kam mit der Aufnahme der statischen Waldgrenzen in den ÖREB-Kataster.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_typ"><a class="anchor" href="#_klasse_typ"></a><a class="link" href="#_klasse_typ">4.1.3. Klasse <code>Typ</code></a></h4>
+<div class="paragraph">
+<p>Über den Typ wird die Art der Geometrie festgelegt.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ausserhalb_Bauzonen_statisch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Waldgrenze ausserhalb Bauzone (statisch)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Abkuerzung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kurzform des Katalogeintrages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WGraB_s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Symbol</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bild des Legendeneintrages; codiert als Base64-Wert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iVBORw0KGg&#8230;&#8203; (abgeschnitten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_topic_waldfeststellung"><a class="anchor" href="#_topic_waldfeststellung"></a><a class="link" href="#_topic_waldfeststellung">4.2. Topic <code>Waldfeststellung</code></a></h3>
+<div class="paragraph">
+<p>Das Topic <code>Waldfeststellung</code> umfasst die eigentlichen, fachlichen Klassen des Themas.</p>
+</div>
+<div class="sect3">
+<h4 id="_klasse_waldgrenze"><a class="anchor" href="#_klasse_waldgrenze"></a><a class="link" href="#_klasse_waldgrenze">4.2.1. Klasse <code>Waldgrenze</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Waldgrenze</code> führt die statisch festgelegten Waldgrenzen als Linien. In Abhängigkeit ihres Typs und des Rechtsstatus gelangen diese Objekte auch in den ÖREB-Kataster.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2030-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Waldabstand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distanz von Bauten und Anlagen zur statischen Waldgrenze in Meter. Im Normalfall 15.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nebenbautenabstand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distanz von Nebenbauten zur statischen Waldgrenze in Meter.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsnummer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nummer, welche eine Rodung kennzeichnet; dies dann, falls die Waldgrenze aufgrund einer Rodung bestimmt wurde</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RO123</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BemerkungIntern</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">interne Bemerkung zum Objekt, die nur für die zuständige Stelle einsehbar ist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine interne Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie der Waldgrenze als Linie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_stockgrenze"><a class="anchor" href="#_klasse_stockgrenze"></a><a class="link" href="#_klasse_stockgrenze">4.2.2. Klasse <code>Stockgrenze</code></a></h4>
+<div class="paragraph">
+<p>Objekte der Klasse <code>Stockgrenze</code> erden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Strockgrenzen die Waldgrenzen abgeleitet.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie der Stockgrenze als Linie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_wirkbereich"><a class="anchor" href="#_klasse_wirkbereich"></a><a class="link" href="#_klasse_wirkbereich">4.2.3. Klasse <code>Wirkbereich</code></a></h4>
+<div class="paragraph">
+<p>Wirkbereiche sind Flächen entlang von statischen Waldgrenzen, in denen ein Bauverbot gilt. Die Wirkbereiche wurden eingeführt, damit der ÖREB-Katasterauszug korrekte Resultate ausweist. Eine statische Waldgrenze kanpp ausserhalb eines Grundstückes wird nur über den Verschnitt mit dem Wirkbereich korrekt als Eigentumsbeschränkung erkannt, nicht aber mit der Liniengeometrie.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Wirkbereichs als Fläche</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 </tbody>
@@ -891,7 +1241,7 @@ Gestaltungsplan" den Namen des Gestaltungsplans enthalten, vgl. Beispiele in nac
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-08 09:37:01 UTC
+Last updated 2024-08-09 09:45:08 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

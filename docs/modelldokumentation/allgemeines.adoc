@@ -22,7 +22,7 @@ Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters. +
 Diese Dokumentation richtet sich an:
 
 * *Personen der zuständigen kantonalen Fachstelle,* um das Thema zu beschreiben und die Dokumentation aktuell zu halten,
-* *Personen der Geoinformation,* um Daten nach diesem Modell abzugeben oder in andere Modelle zu transformieren sowie
+* *Personen der Geoinformation,* um Daten nach diesem Modell abzugeben oder in andere Modelle zu transformieren, sowie
 * *Dritte,* um sich über das Thema zu informieren.
 
 ifdef::backend-pdf[]

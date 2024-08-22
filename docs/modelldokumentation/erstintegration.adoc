@@ -1,25 +1,23 @@
 == Erstintegration
-Dieses Kapitel beschreibt den Datenfluss bei der Erstintegration. Dabei wurden die Daten aus den ursprünglichen Erfassungsapplikationen ins INTERLIS-Modell überführt. Für jedes Attribut wird entweder seine Datenquelle oder dessen Fix-Wert angegeben.
+Dieses Kapitel beschreibt den Datenfluss bei der Erstintegration. Für jedes Attribut ist angegeben, was dessen Datenquelle ist.
 
 === Topic `+Stammdaten+`
-Die Stammdaten wurden auf Input der zuständigen Stelle entweder im Masterkatalog eingetragen oder in Excel-Format festgehalten. +
-
-Auf eine detailliert Beschreibung wird verzichtet.
+Die Stammdaten liegen entweder im Masterkatalog oder in einem separaten Excel vor. Auf eine detailliert Beschreibung wird verzichtet.
 
 === Topic `+Fachdaten+`
-Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
 ==== Klasse `+Waldgrenze+`
 Datenquellen:
 
-- [1] Waldgrenze_Linie.gpkg, Tabelle: Waldgrenze_Linie
-- [2] Waldfeststellungen.accdb, Tabelle: Waldfeststellungen
+* [1] Waldgrenze_Linie.gpkg, Tabelle: Waldgrenze_Linie
+* [2] Waldfeststellungen.accdb, Tabelle: Waldfeststellungen
 
 [cols=2*,options="header"]
 |===
 | Name | Herkunft
+2+| *Klassenattribute*
 m| OID
-| [1].UUID
+| [1]: UUID
 m| erfasstVon
 | fix: geoadmin
 m| erfasstAm
@@ -29,95 +27,85 @@ m| geaendertVon
 m| geaendertAm
 | fix: 1900-01-01T12:00:00
 m| gueltigVon
-| - falls gesetzt: [1].Waldfeststellung_Verfuegungsdatum +
+| - falls gesetzt: [2]: Waldfeststellung_Verfuegungsdatum +
 - sonst: 1900-01-01
 m| gueltigBis
-| fix: null
+| fix: NULL
 m| Waldabstand
-| [2].verminderterAbstand
+| [2]: verminderterAbstand
 m| Nebenbautenabstand
-| [2].verminderterAbstandNebenbauten
+| [2]: verminderterAbstandNebenbauten
 m| Rodungsnummer
-| [2].RodungsNr
+| [2]: RodungsNr
 m| BemerkungIntern
 | todo
 m| Bemerkung
-| [1].Bemerkungen
-4+| *Geometrie*
+| [1]: Bemerkungen
+2+| *Geometrie*
 m| Geometrie
-| Geometrie aus [1]
-|===
-
-==== Klasse `+Stockgrenze+`
-Objekte der Klasse `+Stockgrenze+` erden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Strockgrenzen die Waldgrenzen abgeleitet. 
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| erfasstVon
-| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
-| Musterha
-| intern
-m| erfasstAm
-| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
-| 1980-03-21T15:38:12
-| intern
-m| geaendertVon
-| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
-| Muelleran
-| intern
-m| geaendertAm
-| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
-| 2024-07-30T08:07:57
-| intern
-m| Bemerkung
-| Bemerkung zum Objekt
-| Das ist eine Bemerkung
-| öffentlich
-4+| *Geometrie*
-m| Geometrie
-| Geometrie der Stockgrenze als Linie
-| (ohne Beispiel)
-| öffentlich
+| [1]: Geometrie der Waldgrenze
 |===
 
 ==== Klasse `+Wirkbereich+`
-Wirkbereiche sind Flächen entlang von statischen Waldgrenzen, in denen ein Bauverbot gilt. Die Wirkbereiche wurden eingeführt, damit der ÖREB-Katasterauszug korrekte Resultate ausweist. Eine statische Waldgrenze kanpp ausserhalb eines Grundstückes wird nur über den Verschnitt mit dem Wirkbereich korrekt als Eigentumsbeschränkung erkannt, nicht aber mit der Liniengeometrie.
-[cols=4*,options="header"]
+Datenquellen:
+
+* [1] Waldgrenze_Wirkbereich.gpkg, Tabelle: Waldgrenze_Wirkbereich
+* [2] Waldfeststellungen.accdb, Tabelle: Waldfeststellungen
+
+[cols=2*,options="header"]
 |===
-| Name | Beschreibung | Beispiel | Freigabe
+| Name | Herkunft
+2+| *Klassenattribute*
 m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
+| [1]: UUID
 m| erfasstVon
-| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
-| Musterha
-| intern
+| fix: geoadmin
 m| erfasstAm
-| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
-| 1980-03-21T15:38:12
-| intern
+| fix: 1900-01-01T12:00:00
 m| geaendertVon
-| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
-| Muelleran
-| intern
+|  fix: geoadmin
 m| geaendertAm
-| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
-| 2024-07-30T08:07:57
-| intern
+|  fix: 1900-01-01T12:00:00
 m| Bemerkung
-| Bemerkung zum Objekt
-| Das ist eine Bemerkung
-| öffentlich
-4+| *Geometrie*
+| [1]: Bemerkunge
+2+| *Beziehungsattribute*
+m| rWaldgrenze
+| [1]: rLinie
+2+| *Geometrie*
 m| Geometrie
-| Geometrie des Wirkbereichs als Fläche
-| (ohne Beispiel)
-| öffentlich
+| [1]: Geometrie des Wirkbereichs
+|===
+
+==== Klasse `+Stockgrenze+`
+Datenquellen:
+
+* [1] Datenbank: geoEdit, Schema: a010a, Tabelle: stockgrenze
+* [2] Datenbank: geoEdit, Schema: a010a, Tabelle: waldfeststellung
+* [3] Waldgrenze_Linie.gpkg, Tabelle: Waldgrenze_Linie
+
+[cols=2*,options="header"]
+|===
+| Name | Herkunft
+2+| *Klassenattribute*
+m| OID
+| - falls gesetzt: [1]: t_ili_tid +
+- sonst: eine neue vergeben
+m| erfasstVon
+| fix: geoadmin
+m| erfasstAm
+| fix: 1900-01-01T12:00:00
+m| geaendertVon
+| fix: geoadmin
+m| geaendertAm
+| [1]: technischer_eintrag
+m| Bemerkung
+| [1]: bemerkungen
+2+| *Beziehungsattribute*
+m| rWaldgrenze
+| [3]: UUID (hergeleitet über räumliche Analyse)
+2+| *Geometrie*
+m| Geometrie
+| [1]: Geometrie der Stockgrenze
 |===
 
 ifdef::backend-pdf[]

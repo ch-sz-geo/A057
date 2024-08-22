@@ -1,6 +1,13 @@
 == Modellbeschreibung
 
-<zu beschreiben>
+Im Rahmen der Waldfeststellung wird die Grenze zwischen Wald und Nicht-Wald bestimmt. Dies erfolgt über eine Verfügung. Im Normalfall wird das Verfahren von der Gemeinde im Rahmen einer Revision eines Nutzungsplanes angestossen (Art. 10 Abs. 2 WaG). Sie meldet dem Amt für Wald und Natur (AWN) den Bedarf neuer Waldfeststellung. Das AWN beurteilt daraufhin die Situation. Wird im betroffenen Gebiet eine bestockte Fläche als „Wald“ im Rechtssinne gewertet, markiert das AWN deren Stockgrenze. Danach vermisst der Geometer die Stockgrenze und erstellt einen Mutationsplan für die öffentliche Auflage, in welchem die eingemessene Stockgrenze und – 2 m ausserhalb (§35 Abs. 2 VVzPBG) – die Waldgrenze eingezeichnet sind. Die Waldfeststellung wird im Amtsblatt veröffentlicht und der Mutationsplan bei der Gemeinde öffentlich aufgelegt. Verstreicht die zwanzigtägige Einsprachefrist ungenutzt, wird die Waldgrenze als statisch und eigentümerverbindlich verfügt. Waldfeststellungsverfügung und Mutationsplan erhalten nach einer ungenutzten Beschwerde von wiederum 20 Tagen Rechtskraft.
+
+Auf dem verfügten Mutationsplan sind beide Linien, die Stockgrenze und die Waldgrenze, eingezeichnet. Die für den ÖREB-Kataster relevante Linie ist diejenige der Waldgrenze.
+
+Dieses Modell beinhaltet neu zwei bisher separat geführte Themen:
+
+* Waldgrenzen
+* Stockgrenzen
 
 ifdef::backend-pdf[]
 <<<

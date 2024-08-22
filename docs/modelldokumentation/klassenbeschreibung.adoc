@@ -82,8 +82,8 @@ m| Symbol
 | öffentlich
 |===
 
-=== Topic `+Waldfeststellung+`
-Das Topic `+Waldfeststellung+` umfasst die eigentlichen, fachlichen Klassen des Themas.
+=== Topic `+Fachdaten+`
+Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
 ==== Klasse `+Waldgrenze+`
 Die Klasse `+Waldgrenze+` führt die statisch festgelegten Waldgrenzen als Linien. In Abhängigkeit ihres Typs und des Rechtsstatus gelangen diese Objekte auch in den ÖREB-Kataster.
@@ -130,10 +130,6 @@ m| Rodungsnummer
 | Nummer, welche eine Rodung kennzeichnet; dies dann, falls die Waldgrenze aufgrund einer Rodung bestimmt wurde
 | RO123
 | öffentlich
-m| BemerkungIntern
-| interne Bemerkung zum Objekt, die nur für die zuständige Stelle einsehbar ist
-| Das ist eine interne Bemerkung
-| intern
 m| Bemerkung
 | öffentliche Bemerkung zum Objekt
 | Das ist eine öffentliche Bemerkung

@@ -37,8 +37,6 @@ m| Nebenbautenabstand
 | [2]: verminderterAbstandNebenbauten
 m| Rodungsnummer
 | [2]: RodungsNr
-m| BemerkungIntern
-| todo
 m| Bemerkung
 | [1]: Bemerkungen
 2+| *Geometrie*

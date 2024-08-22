@@ -46,8 +46,9 @@ m| Geometrie
 | [1]: Geometrie der Waldgrenze
 2+| *Beziehungsattribute*
 m| rTyp
-| - falls [2]: in_Bauzonen, dann "e1a6fbe3-9598-4620-93f0-7ae8e5f89c68"
-- falls [2]: ausserhalb_Bauzonen, dann "9cfed600-d071-4589-8f50-5197cae717df"
+| Bestimmung über die Auswertung von [2]: Art_Waldgrenze: +
+- falls "in_Bauzonen", dann "e1a6fbe3-9598-4620-93f0-7ae8e5f89c68" +
+- falls "ausserhalb_Bauzonen", dann "9cfed600-d071-4589-8f50-5197cae717df" +
 - sonst: "- - -" (damit bei der Validierung ein Fehler erzwungen wird)
 |===
 

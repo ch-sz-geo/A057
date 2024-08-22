@@ -145,42 +145,6 @@ m| Geometrie
 | öffentlich
 |===
 
-==== Klasse `+Stockgrenze+`
-Objekte der Klasse `+Stockgrenze+` erden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Strockgrenzen die Waldgrenzen abgeleitet. 
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| erfasstVon
-| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
-| Musterha
-| intern
-m| erfasstAm
-| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
-| 1980-03-21T15:38:12
-| intern
-m| geaendertVon
-| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
-| Muelleran
-| intern
-m| geaendertAm
-| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
-| 2024-07-30T08:07:57
-| intern
-m| Bemerkung
-| Bemerkung zum Objekt
-| Das ist eine Bemerkung
-| öffentlich
-4+| *Geometrie*
-m| Geometrie
-| Geometrie der Stockgrenze als Linie
-| (ohne Beispiel)
-| öffentlich
-|===
-
 ==== Klasse `+Wirkbereich+`
 Wirkbereiche sind Flächen entlang von statischen Waldgrenzen, in denen ein Bauverbot gilt. Die Wirkbereiche wurden eingeführt, damit der ÖREB-Katasterauszug korrekte Resultate ausweist. Eine statische Waldgrenze kanpp ausserhalb eines Grundstückes wird nur über den Verschnitt mit dem Wirkbereich korrekt als Eigentumsbeschränkung erkannt, nicht aber mit der Liniengeometrie.
 [cols=4*,options="header"]
@@ -215,6 +179,48 @@ m| Geometrie
 | Geometrie des Wirkbereichs als Fläche
 | (ohne Beispiel)
 | öffentlich
+|===
+
+==== Klasse `+Stockgrenze+`
+Objekte der Klasse `+Stockgrenze+` erden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Strockgrenzen die Waldgrenzen abgeleitet. 
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| intern
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| intern
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| intern
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| intern
+m| Bemerkung
+| Bemerkung zum Objekt
+| Das ist eine Bemerkung
+| öffentlich
+4+| *Geometrie*
+m| Geometrie
+| Geometrie der Stockgrenze als Linie
+| (ohne Beispiel)
+| öffentlich
+4+| *Datenqualität*
+2+| *Regel* 2+| *Erläuterung*
+2+| - Zu jeder Stockgrenze ist genau eine Waldgrenze zugeordnet
+2+| Bei der Datenerfassen werden die Stockgrenzen häufig sehr früh erfasst. Die Digitalisierung der Waldgrenzen erfolgt zeitlich verzögert. Damit dies möglich wird, ist die Kardinalität der Rolle `rWaldgrenze` mit 0..1 deklariert. Gültig ist der Datensatz jedoch erst, wenn diese Regel erfüllt wird.
+2+| - Einer Waldgrenze kann, muss aber nicht, maximal eine Stockgrenze zugeordnet sein.
+2+| Es gibt Fälle, bei denen eine Waldgrenze festgelegt wird, ohne dass vorgängig eine Stockgrenze bestimmt wurde.
 |===
 
 ifdef::backend-pdf[]

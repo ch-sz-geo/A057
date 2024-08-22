@@ -43,7 +43,7 @@ m| BemerkungIntern
 | todo
 m| Bemerkung
 | [1].Bemerkungen
-4+| *Geometrie*
+2+| *Geometrie*
 m| Geometrie
 | Geometrie aus [1]
 |===

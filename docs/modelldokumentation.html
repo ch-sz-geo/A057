@@ -199,34 +199,34 @@ th {
 <li><a href="#_zweck_des_dokuments">1.2. Zweck des Dokuments</a></li>
 </ul>
 </li>
-<li><a href="#_erstintegration">2. Erstintegration</a>
+<li><a href="#_modellbeschreibung">2. Modellbeschreibung</a></li>
+<li><a href="#_diagramme">3. Diagramme</a>
 <ul class="sectlevel2">
-<li><a href="#_topic_stammdaten">2.1. Topic <code>Stammdaten</code></a></li>
-<li><a href="#_topic_fachdaten">2.2. Topic <code>Fachdaten</code></a>
+<li><a href="#_komponentendiagramm">3.1. Komponentendiagramm</a></li>
+<li><a href="#_klassendiagramm">3.2. Klassendiagramm</a></li>
+</ul>
+</li>
+<li><a href="#_klassenbeschreibung">4. Klassenbeschreibung</a>
+<ul class="sectlevel2">
+<li><a href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a>
 <ul class="sectlevel3">
-<li><a href="#_klasse_waldgrenze">2.2.1. Klasse <code>Waldgrenze</code></a></li>
-<li><a href="#_klasse_wirkbereich">2.2.2. Klasse <code>Wirkbereich</code></a></li>
-<li><a href="#_klasse_stockgrenze">2.2.3. Klasse <code>Stockgrenze</code></a></li>
+<li><a href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></li>
+<li><a href="#_klasse_verbindlichkeit">4.1.2. Klasse <code>Verbindlichkeit</code></a></li>
+<li><a href="#_klasse_typ">4.1.3. Klasse <code>Typ</code></a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_modellbeschreibung">3. Modellbeschreibung</a></li>
-<li><a href="#_diagramme">4. Diagramme</a>
-<ul class="sectlevel2">
-<li><a href="#_komponentendiagramm">4.1. Komponentendiagramm</a></li>
-<li><a href="#_klassendiagramm">4.2. Klassendiagramm</a></li>
-</ul>
-</li>
-<li><a href="#_klassenbeschreibung">5. Klassenbeschreibung</a>
-<ul class="sectlevel2">
-<li><a href="#_topic_stammdaten_2">5.1. Topic <code>Stammdaten</code></a>
+<li><a href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a>
 <ul class="sectlevel3">
-<li><a href="#_klasse_katalogeintrag">5.1.1. Klasse <code>Katalogeintrag</code></a></li>
-<li><a href="#_klasse_verbindlichkeit">5.1.2. Klasse <code>Verbindlichkeit</code></a></li>
-<li><a href="#_klasse_typ">5.1.3. Klasse <code>Typ</code></a></li>
+<li><a href="#_klasse_waldgrenze">4.2.1. Klasse <code>Waldgrenze</code></a></li>
+<li><a href="#_klasse_wirkbereich">4.2.2. Klasse <code>Wirkbereich</code></a></li>
+<li><a href="#_klasse_stockgrenze">4.2.3. Klasse <code>Stockgrenze</code></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#_erstintegration">5. Erstintegration</a>
+<ul class="sectlevel2">
+<li><a href="#_topic_stammdaten_2">5.1. Topic <code>Stammdaten</code></a></li>
 <li><a href="#_topic_fachdaten_2">5.2. Topic <code>Fachdaten</code></a>
 <ul class="sectlevel3">
 <li><a href="#_klasse_waldgrenze_2">5.2.1. Klasse <code>Waldgrenze</code></a></li>
@@ -301,7 +301,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-08-22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-08-23</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -452,265 +452,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_erstintegration"><a class="anchor" href="#_erstintegration"></a><a class="link" href="#_erstintegration">2. Erstintegration</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Dieses Kapitel beschreibt den Datenfluss bei der Erstintegration. Für jedes Attribut ist angegeben, was dessen Datenquelle ist.</p>
-</div>
-<div class="sect2">
-<h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">2.1. Topic <code>Stammdaten</code></a></h3>
-<div class="paragraph">
-<p>Die Stammdaten liegen entweder im Masterkatalog oder in einem separaten Excel vor. Auf eine detailliert Beschreibung wird verzichtet.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">2.2. Topic <code>Fachdaten</code></a></h3>
-<div class="sect3">
-<h4 id="_klasse_waldgrenze"><a class="anchor" href="#_klasse_waldgrenze"></a><a class="link" href="#_klasse_waldgrenze">2.2.1. Klasse <code>Waldgrenze</code></a></h4>
-<div class="paragraph">
-<p>Datenquellen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>[1] Waldgrenze_Linie.gpkg, Tabelle: Waldgrenze_Linie</p>
-</li>
-<li>
-<p>[2] Waldfeststellungen.accdb, Tabelle: Waldfeststellungen</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Herkunft</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Klassenattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: UUID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- falls gesetzt: [2]: Waldfeststellung_Verfuegungsdatum<br>
-- sonst: 1900-01-01</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: NULL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Waldabstand</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[2]: verminderterAbstand</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nebenbautenabstand</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[2]: verminderterAbstandNebenbauten</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsnummer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[2]: RodungsNr</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Bemerkungen</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Geometrie der Waldgrenze</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rTyp</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bestimmung über die Auswertung von [2]: Art_Waldgrenze:<br>
-- falls "in_Bauzonen", dann "e1a6fbe3-9598-4620-93f0-7ae8e5f89c68"<br>
-- falls "ausserhalb_Bauzonen", dann "9cfed600-d071-4589-8f50-5197cae717df"<br>
-- sonst: "- - -" (damit bei der Validierung ein Fehler erzwungen wird)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_wirkbereich"><a class="anchor" href="#_klasse_wirkbereich"></a><a class="link" href="#_klasse_wirkbereich">2.2.2. Klasse <code>Wirkbereich</code></a></h4>
-<div class="paragraph">
-<p>Datenquellen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>[1] Waldgrenze_Wirkbereich.gpkg, Tabelle: Waldgrenze_Wirkbereich</p>
-</li>
-<li>
-<p>[2] Waldfeststellungen.accdb, Tabelle: Waldfeststellungen</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Herkunft</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Klassenattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: UUID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Bemerkunge</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rWaldgrenze</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: rLinie</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Geometrie des Wirkbereichs</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_stockgrenze"><a class="anchor" href="#_klasse_stockgrenze"></a><a class="link" href="#_klasse_stockgrenze">2.2.3. Klasse <code>Stockgrenze</code></a></h4>
-<div class="paragraph">
-<p>Datenquellen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>[1] Datenbank: geoEdit, Schema: a010a, Tabelle: stockgrenze</p>
-</li>
-<li>
-<p>[2] Datenbank: geoEdit, Schema: a010a, Tabelle: waldfeststellung</p>
-</li>
-<li>
-<p>[3] Waldgrenze_Linie.gpkg, Tabelle: Waldgrenze_Linie</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Herkunft</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Klassenattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- falls gesetzt: [1]: t_ili_tid<br>
-- sonst: eine neue vergeben</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: technischer_eintrag</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: bemerkungen</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rWaldgrenze</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[3]: UUID (hergeleitet über räumliche Analyse)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Geometrie der Stockgrenze</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_modellbeschreibung"><a class="anchor" href="#_modellbeschreibung"></a><a class="link" href="#_modellbeschreibung">3. Modellbeschreibung</a></h2>
+<h2 id="_modellbeschreibung"><a class="anchor" href="#_modellbeschreibung"></a><a class="link" href="#_modellbeschreibung">2. Modellbeschreibung</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Im Rahmen der Waldfeststellung wird die Grenze zwischen Wald und Nicht-Wald bestimmt. Dies erfolgt über eine Verfügung. Im Normalfall wird das Verfahren von der Gemeinde im Rahmen einer Revision eines Nutzungsplanes angestossen (Art. 10 Abs. 2 WaG). Sie meldet dem Amt für Wald und Natur (AWN) den Bedarf neuer Waldfeststellung. Das AWN beurteilt daraufhin die Situation. Wird im betroffenen Gebiet eine bestockte Fläche als „Wald“ im Rechtssinne gewertet, markiert das AWN deren Stockgrenze. Danach vermisst der Geometer die Stockgrenze und erstellt einen Mutationsplan für die öffentliche Auflage, in welchem die eingemessene Stockgrenze und – 2 m ausserhalb (§35 Abs. 2 VVzPBG) – die Waldgrenze eingezeichnet sind. Die Waldfeststellung wird im Amtsblatt veröffentlicht und der Mutationsplan bei der Gemeinde öffentlich aufgelegt. Verstreicht die zwanzigtägige Einsprachefrist ungenutzt, wird die Waldgrenze als statisch und eigentümerverbindlich verfügt. Waldfeststellungsverfügung und Mutationsplan erhalten nach einer ungenutzten Beschwerde von wiederum 20 Tagen Rechtskraft.</p>
@@ -734,10 +476,10 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_diagramme"><a class="anchor" href="#_diagramme"></a><a class="link" href="#_diagramme">4. Diagramme</a></h2>
+<h2 id="_diagramme"><a class="anchor" href="#_diagramme"></a><a class="link" href="#_diagramme">3. Diagramme</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_komponentendiagramm"><a class="anchor" href="#_komponentendiagramm"></a><a class="link" href="#_komponentendiagramm">4.1. Komponentendiagramm</a></h3>
+<h3 id="_komponentendiagramm"><a class="anchor" href="#_komponentendiagramm"></a><a class="link" href="#_komponentendiagramm">3.1. Komponentendiagramm</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAACoCAIAAACOiEwFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASdEVYdFNvZnR3YXJlAEdyZWVuc2hvdF5VCAUAAAP8SURBVHhe7ZUBbusgEAV7/7PlTvkoC6sVYAzktbF/ZvRU7T5I7Y4q5ecJIlApA5UyUCkDlTKWVf78PvlJd2NH5fP5+L2gUhZUyoJKWVApCyplQaUsqJQFlbJ8l8rvIf/Nc1zuv/I6QaUsqJQFlbKgUhZUyoJKWVApywdUpsaJpc+/nfGztt/k9cEF1m4nqjc7Wrf/gI2Mn7X9Jq8PLrB2O1G9WXdNPw0vDVut8d4bn22tyjhXTeytTMys1njvpeXVLLB2O1E9sn0Di/fxQiyP5m4Z53ZoyzifnsbZhrAusHY7UT3PHunE0mePl0c337/gaW92P9Itw7rA2u1E9bwqR6/odE/b+Z0LTnVqpVOdVnNZF1i7neg9r7O2w2kZ570L4zKeerofCesCa7cTved11u7Qlkfz/IU0zJc2nJZhXWDtdqJ6nj3Sqcpqjo0NR/PpBZttHZfe+Jyw1ZruXNYF1m4nquf9x0GlLKiUBZWyoFIWVMqCSllQKQsqZUGlLKiUBZWyoFIWVMqCSllQKQsqZUGlLH+h8nvIf/Mcyyo/wupf9RFQKeMOr/jyeH2bqJSBShmXf79g8OI2USnj2i/XuLuyTVTKuIfKdrggF36zYO1ovhSolHFdlZHL6ougUgYqZdxD5S1ApQxUykCljHuo5GtHBiploFIGKmWgUgYqvwtUykClDFTKuIdKvnZkoFIGKmWgUgYqZaDyu0ClDFTKQKWMe6jka0cGKmWgUgYqZaBSBiq/C1TKQKUMVMq4h0q+dmSgUgYqZaBSBiploPK7QKUMVMpApYx7qORrRwYqZaBSBipl3FJleulPkd+gx/j0InRUPp6Pv88tZI1BpQxUykClDFTKQKUMVMpApQxUyuiohEmyssJV/itvF1TKgkpZUCkLKmVBpSyolAWVsqyprLSO15juUfWbu3eOMr48ebr0xNOk35aVFWZV2nx0WqV75OXgg0cZf2TydOO5g6TflpUVNlVWR0Zs4myr/zTiacLWbpmXrdWao6Et009vvLem7bOywkilfSAO1RqHbhmHbmnDfCk5PboW53bw2ZusrDClMpZt4/GyHbrl+DRm47QtJ6+dlr5mZQWByjQ73lRDt0xDxMrYxybORmyqI6M9rYa90tesrPCuyvaoO3TLeNrN+ObkLxxf2yh9zcoKJyrtM4PG5zTEuR26pQ3zpeQ0Dm0Z5zj47E1WVnhXpa3WeO+DzbZ66YPNhjfdMq42J+ZPq8FmW730oZ1tjaWtWVnhXCWxoPKtJBtOe5SVFVC5GVTKgkpZUCkLKmVBpSyolAWVsqBSFlTKgkpZUCkLKmVBpSyolAWVskyphEmyskK9wzaolIFKGaiUgUoRz+c/OWUztRTOSdcAAAAASUVORK5CYII=" alt="SZ Waldfeststellungen V2 Komponentendiagramm">
@@ -745,7 +487,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_klassendiagramm"><a class="anchor" href="#_klassendiagramm"></a><a class="link" href="#_klassendiagramm">4.2. Klassendiagramm</a></h3>
+<h3 id="_klassendiagramm"><a class="anchor" href="#_klassendiagramm"></a><a class="link" href="#_klassendiagramm">3.2. Klassendiagramm</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="data:image/png;base64,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" alt="SZ Waldfeststellungen V2 Klassendiagramm">
@@ -755,10 +497,10 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_klassenbeschreibung"><a class="anchor" href="#_klassenbeschreibung"></a><a class="link" href="#_klassenbeschreibung">5. Klassenbeschreibung</a></h2>
+<h2 id="_klassenbeschreibung"><a class="anchor" href="#_klassenbeschreibung"></a><a class="link" href="#_klassenbeschreibung">4. Klassenbeschreibung</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_topic_stammdaten_2"><a class="anchor" href="#_topic_stammdaten_2"></a><a class="link" href="#_topic_stammdaten_2">5.1. Topic <code>Stammdaten</code></a></h3>
+<h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a></h3>
 <div class="paragraph">
 <p>Das Topic <code>Stammdaten</code> umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (INTERLIS-Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert.<br></p>
 </div>
@@ -766,7 +508,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <p>Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf durch die Abteilung Geoinformation nachgeführt und . Die Stammdaten werden durch die Abteilung Geoinformation im Internet veröffentlicht.</p>
 </div>
 <div class="sect3">
-<h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">5.1.1. Klasse <code>Katalogeintrag</code></a></h4>
+<h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></h4>
 <div class="paragraph">
 <p>Die Klasse <code>Katalogeintrag</code> enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte Katalogeintrag, sondern nur Objekte von den spezialisierten Klassen.</p>
 </div>
@@ -820,7 +562,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_verbindlichkeit"><a class="anchor" href="#_klasse_verbindlichkeit"></a><a class="link" href="#_klasse_verbindlichkeit">5.1.2. Klasse <code>Verbindlichkeit</code></a></h4>
+<h4 id="_klasse_verbindlichkeit"><a class="anchor" href="#_klasse_verbindlichkeit"></a><a class="link" href="#_klasse_verbindlichkeit">4.1.2. Klasse <code>Verbindlichkeit</code></a></h4>
 <div class="paragraph">
 <p>Die Verbindlichkeit kam mit der Aufnahme der statischen Waldgrenzen in den ÖREB-Kataster.</p>
 </div>
@@ -858,7 +600,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_typ"><a class="anchor" href="#_klasse_typ"></a><a class="link" href="#_klasse_typ">5.1.3. Klasse <code>Typ</code></a></h4>
+<h4 id="_klasse_typ"><a class="anchor" href="#_klasse_typ"></a><a class="link" href="#_klasse_typ">4.1.3. Klasse <code>Typ</code></a></h4>
 <div class="paragraph">
 <p>Über den Typ wird die Art der Geometrie festgelegt.</p>
 </div>
@@ -925,12 +667,12 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_topic_fachdaten_2"><a class="anchor" href="#_topic_fachdaten_2"></a><a class="link" href="#_topic_fachdaten_2">5.2. Topic <code>Fachdaten</code></a></h3>
+<h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a></h3>
 <div class="paragraph">
 <p>Das Topic <code>Fachdaten</code> umfasst die eigentlichen, fachlichen Klassen des Themas.</p>
 </div>
 <div class="sect3">
-<h4 id="_klasse_waldgrenze_2"><a class="anchor" href="#_klasse_waldgrenze_2"></a><a class="link" href="#_klasse_waldgrenze_2">5.2.1. Klasse <code>Waldgrenze</code></a></h4>
+<h4 id="_klasse_waldgrenze"><a class="anchor" href="#_klasse_waldgrenze"></a><a class="link" href="#_klasse_waldgrenze">4.2.1. Klasse <code>Waldgrenze</code></a></h4>
 <div class="paragraph">
 <p>Die Klasse <code>Waldgrenze</code> führt die statisch festgelegten Waldgrenzen als Linien. In Abhängigkeit ihres Typs und des Rechtsstatus gelangen diese Objekte auch in den ÖREB-Kataster.</p>
 </div>
@@ -1029,7 +771,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_wirkbereich_2"><a class="anchor" href="#_klasse_wirkbereich_2"></a><a class="link" href="#_klasse_wirkbereich_2">5.2.2. Klasse <code>Wirkbereich</code></a></h4>
+<h4 id="_klasse_wirkbereich"><a class="anchor" href="#_klasse_wirkbereich"></a><a class="link" href="#_klasse_wirkbereich">4.2.2. Klasse <code>Wirkbereich</code></a></h4>
 <div class="paragraph">
 <p>Wirkbereiche sind Flächen entlang von statischen Waldgrenzen, in denen ein Bauverbot gilt. Die Wirkbereiche wurden eingeführt, damit der ÖREB-Katasterauszug korrekte Resultate ausweist. Eine statische Waldgrenze kanpp ausserhalb eines Grundstückes wird nur über den Verschnitt mit dem Wirkbereich korrekt als Eigentumsbeschränkung erkannt, nicht aber mit der Liniengeometrie.</p>
 </div>
@@ -1098,7 +840,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_stockgrenze_2"><a class="anchor" href="#_klasse_stockgrenze_2"></a><a class="link" href="#_klasse_stockgrenze_2">5.2.3. Klasse <code>Stockgrenze</code></a></h4>
+<h4 id="_klasse_stockgrenze"><a class="anchor" href="#_klasse_stockgrenze"></a><a class="link" href="#_klasse_stockgrenze">4.2.3. Klasse <code>Stockgrenze</code></a></h4>
 <div class="paragraph">
 <p>Objekte der Klasse <code>Stockgrenze</code> erden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Strockgrenzen die Waldgrenzen abgeleitet.</p>
 </div>
@@ -1177,6 +919,264 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">- Einer Waldgrenze kann, muss aber nicht, maximal eine Stockgrenze zugeordnet sein.</p></td>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Es gibt Fälle, bei denen eine Waldgrenze festgelegt wird, ohne dass vorgängig eine Stockgrenze bestimmt wurde.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erstintegration"><a class="anchor" href="#_erstintegration"></a><a class="link" href="#_erstintegration">5. Erstintegration</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dieses Kapitel beschreibt den Datenfluss bei der Erstintegration. Für jedes Attribut ist angegeben, was dessen Datenquelle ist.</p>
+</div>
+<div class="sect2">
+<h3 id="_topic_stammdaten_2"><a class="anchor" href="#_topic_stammdaten_2"></a><a class="link" href="#_topic_stammdaten_2">5.1. Topic <code>Stammdaten</code></a></h3>
+<div class="paragraph">
+<p>Die Stammdaten liegen entweder im Masterkatalog oder in einem separaten Excel vor. Auf eine detailliert Beschreibung wird verzichtet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_topic_fachdaten_2"><a class="anchor" href="#_topic_fachdaten_2"></a><a class="link" href="#_topic_fachdaten_2">5.2. Topic <code>Fachdaten</code></a></h3>
+<div class="sect3">
+<h4 id="_klasse_waldgrenze_2"><a class="anchor" href="#_klasse_waldgrenze_2"></a><a class="link" href="#_klasse_waldgrenze_2">5.2.1. Klasse <code>Waldgrenze</code></a></h4>
+<div class="paragraph">
+<p>Datenquellen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[1] Waldgrenze_Linie.gpkg, Tabelle: Waldgrenze_Linie</p>
+</li>
+<li>
+<p>[2] Waldfeststellungen.accdb, Tabelle: Waldfeststellungen</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Herkunft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Klassenattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: UUID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- falls gesetzt: [2]: Waldfeststellung_Verfuegungsdatum<br>
+- sonst: 1900-01-01</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: NULL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Waldabstand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[2]: verminderterAbstand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nebenbautenabstand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[2]: verminderterAbstandNebenbauten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsnummer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[2]: RodungsNr</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Bemerkungen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Geometrie der Waldgrenze</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rTyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bestimmung über die Auswertung von [2]: Art_Waldgrenze:<br>
+- falls "in_Bauzonen", dann "e1a6fbe3-9598-4620-93f0-7ae8e5f89c68"<br>
+- falls "ausserhalb_Bauzonen", dann "9cfed600-d071-4589-8f50-5197cae717df"<br>
+- sonst: "- - -" (damit bei der Validierung ein Fehler erzwungen wird)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_wirkbereich_2"><a class="anchor" href="#_klasse_wirkbereich_2"></a><a class="link" href="#_klasse_wirkbereich_2">5.2.2. Klasse <code>Wirkbereich</code></a></h4>
+<div class="paragraph">
+<p>Datenquellen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[1] Waldgrenze_Wirkbereich.gpkg, Tabelle: Waldgrenze_Wirkbereich</p>
+</li>
+<li>
+<p>[2] Waldfeststellungen.accdb, Tabelle: Waldfeststellungen</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Herkunft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Klassenattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: UUID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Bemerkunge</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rWaldgrenze</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: rLinie</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Geometrie des Wirkbereichs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_stockgrenze_2"><a class="anchor" href="#_klasse_stockgrenze_2"></a><a class="link" href="#_klasse_stockgrenze_2">5.2.3. Klasse <code>Stockgrenze</code></a></h4>
+<div class="paragraph">
+<p>Datenquellen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[1] Datenbank: geoEdit, Schema: a010a, Tabelle: stockgrenze</p>
+</li>
+<li>
+<p>[2] Datenbank: geoEdit, Schema: a010a, Tabelle: waldfeststellung</p>
+</li>
+<li>
+<p>[3] Waldgrenze_Linie.gpkg, Tabelle: Waldgrenze_Linie</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Herkunft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Klassenattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- falls gesetzt: [1]: t_ili_tid<br>
+- sonst: eine neue vergeben</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: 1900-01-01T12:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: geoadmin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: technischer_eintrag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: bemerkungen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rWaldgrenze</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[3]: UUID (hergeleitet über räumliche Analyse)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]: Geometrie der Stockgrenze</p></td>
 </tr>
 </tbody>
 </table>
@@ -1422,7 +1422,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-22 15:12:20 UTC
+Last updated 2024-08-23 06:18:08 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

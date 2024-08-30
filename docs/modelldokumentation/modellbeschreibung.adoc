@@ -4,10 +4,12 @@ Im Rahmen der Waldfeststellung wird die Grenze zwischen Wald und Nicht-Wald best
 
 Auf dem verfügten Mutationsplan sind beide Linien, die Stockgrenze und die Waldgrenze, eingezeichnet. Die für den ÖREB-Kataster relevante Linie ist diejenige der Waldgrenze.
 
-Dieses Modell beinhaltet neu zwei bisher separat geführte Themen:
+Dieses Modell beinhaltet die Daten zu:
 
 * Waldgrenzen
 * Stockgrenzen
+
+Diese beiden Datensätze wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema "Waldfeststellung" zusammengefasst.
 
 ifdef::backend-pdf[]
 <<<

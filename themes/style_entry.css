@@ -69,7 +69,7 @@ li a {
 	text-indent: initial;
 }
 
-li code {
+li a code {
 	font-family: 'trade gothic', sans-serif;
 	font-size: 14pt;
 	color: black;

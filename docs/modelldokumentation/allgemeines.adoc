@@ -13,11 +13,13 @@ Ausarbeitung eines Geodatenmodells zuständig sind.
 
 
 ===  Zweck des Dokuments
-Dieses Dokument beschreibt den Geobasisdatensatz
+Im Jahre 2024 wurde das Thema der Waldfeststellungen überarbeitet und frisch aufgesetzt. Dabei wurde der Prozess der Waldfeststellung berücksichtigt und alle Klassen, die dabei eine Rolle spielen, in dieses Thema zusammengefasst. Diese sind:
  
-* *statische Waldgrenzen.* +
+* *Stockgrenze*
+* *Waldgrenze*
+* *Wirkbereiche der Waldgrenzen*
 
-Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters. +
+Die Waldgrenze ist Bestandteil des ÖREB-Katasters. +
 
 Diese Dokumentation richtet sich an:
 

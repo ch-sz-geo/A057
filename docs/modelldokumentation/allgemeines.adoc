@@ -35,6 +35,13 @@ Im vorliegenden Thema werden die Geometrien der Stockgrenze, Waldgrenze und Wirk
 
 beschrieben.
 
+Die Themen
+
+* *Stockgrenzen (A010)* und
+* *Waldgrenzen A053)*
+
+bleiben bestehen. Sie werden über eine Datentransformation aus dem Thema *"Waldfeststellung"* bedient. Die zuständige Stelle führt die Daten nur noch im Thema "Waldfeststellung" nach. Alles andere, wie die Publikation der Stockgrenzen im GeoShop oder die der Waldgrenzen im ÖREB-Kataster erfolgt automatisch.
+
 
 ifdef::backend-pdf[]
 <<<

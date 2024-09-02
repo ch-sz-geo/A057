@@ -6,10 +6,11 @@ Auf dem verfügten Mutationsplan sind beide Linien, die Stockgrenze und die Wald
 
 Dieses Modell beinhaltet die Daten zu:
 
-* Waldgrenzen
-* Stockgrenzen
+* *Stockgrenze*
+* *Waldgrenze*
+* *Wirkbereiche der Waldgrenzen*
 
-Diese beiden Datensätze wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema "Waldfeststellung" zusammengefasst.
+Die Datensätze *Stockgrenze* (A010) und *Waldgrenze" (A053) wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema "Waldfeststellung" zusammengefasst.
 
 ifdef::backend-pdf[]
 <<<

@@ -130,6 +130,14 @@ m| Rodungsnummer
 | Nummer, welche eine Rodung kennzeichnet; dies dann, falls die Waldgrenze aufgrund einer Rodung bestimmt wurde
 | RO123
 | öffentlich
+m| Begruendungsverfahren
+| OID des Verfahrens, in welchem die Waldgrenze begründet wurde.
+| bc091361-7620-438e-9f9d-cd1e855ff456
+| öffentlich
+m| Aufhebungsverfahren
+| OID des Verfahrens, in welchem die Waldgrenze aufgehoben wurde.
+| 8dff0842-51c5-45a3-8e2d-96fca7b30fac
+| öffentlich
 m| Bemerkung
 | öffentliche Bemerkung zum Objekt
 | Das ist eine öffentliche Bemerkung

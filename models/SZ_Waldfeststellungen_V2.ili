@@ -19,7 +19,6 @@ INTERLIS 2.3;
 !!                          - Einführung OID
 !!                          - Anpassungen aufgrund des neuen ÖREB-Rahmenmodells (Bereich der statischen Waldgrenze)
 !!                          - Überführung von Domains in Kataloge
-!!                          - Model-Import A241 (Verfahren Waldrecht)
 !! 2017-01-11 |  -  | Kep | Geometrie ausschliesslich mit STRAIGHTS
 !! 2016-10-26 |  -  | Kep | Erstfassung
 !!==============================================================================
@@ -28,7 +27,6 @@ MODEL SZ_Waldfeststellungen_V2 (de)
   VERSION "2023-09-08" =
 
   IMPORTS UNQUALIFIED INTERLIS;
-  IMPORTS SZ_Verfahren_Waldrecht_V1;
 
   DOMAIN
     Punkt =
@@ -76,45 +74,44 @@ MODEL SZ_Waldfeststellungen_V2 (de)
 !!------------------------------------------------------------------------------
   TOPIC Fachdaten =
     DEPENDS ON SZ_Waldfeststellungen_V2.Stammdaten;
-    DEPENDS ON SZ_Verfahren_Waldrecht_V1.Fachdaten;
 !!------------------------------------------------------------------------------
     CLASS Waldgrenze =
       OID AS UUIDOID;
-      erfasstVon          :  MANDATORY  TEXT*100;
-      erfasstAm           :  MANDATORY  XMLDateTime;
-      geaendertVon        :  MANDATORY  TEXT*100;
-      geaendertAm         :  MANDATORY  XMLDateTime;
-      gueltigVon          :             XMLDate;  !! bei der Begründung ist "gueltigVon" noch leer
-      gueltigBis          :             XMLDate;
-      Waldabstand         :  MANDATORY  0 .. 50;
-      Nebenbautenabstand  :  MANDATORY  0 .. 50;
-      Rodungsnummer       :             TEXT*25;
-      Bemerkung           :             MTEXT*1000;
-      Geometrie           :  MANDATORY  Linie;
+      erfasstVon             :  MANDATORY  TEXT*100;
+      erfasstAm              :  MANDATORY  XMLDateTime;
+      geaendertVon           :  MANDATORY  TEXT*100;
+      geaendertAm            :  MANDATORY  XMLDateTime;
+      Waldabstand            :  MANDATORY  0 .. 50;
+      Nebenbautenabstand     :  MANDATORY  0 .. 50;
+      Rodungsnummer          :             TEXT*25;
+      Begruendungsverfahren  :             TEXT*36;
+      Aufhebungsverfahren    :             TEXT*36;
+      Bemerkung              :             MTEXT*1000;
+      Geometrie              :  MANDATORY  Linie;
     END Waldgrenze;
 
     CLASS Wirkbereich =
       OID AS UUIDOID;
-      erfasstVon          :  MANDATORY  TEXT*100;
-      erfasstAm           :  MANDATORY  XMLDateTime;
-      geaendertVon        :  MANDATORY  TEXT*100;
-      geaendertAm         :  MANDATORY  XMLDateTime;
-      Bemerkung           :             MTEXT*1000;
-      Geometrie           :  MANDATORY  Einzelflaeche;
+      erfasstVon    :  MANDATORY  TEXT*100;
+      erfasstAm     :  MANDATORY  XMLDateTime;
+      geaendertVon  :  MANDATORY  TEXT*100;
+      geaendertAm   :  MANDATORY  XMLDateTime;
+      Bemerkung     :             MTEXT*1000;
+      Geometrie     :  MANDATORY  Einzelflaeche;
     END Wirkbereich;
 
     CLASS Stockgrenze =
       OID AS UUIDOID;
-      erfasstVon          :  MANDATORY  TEXT*100;
-      erfasstAm           :  MANDATORY  XMLDateTime;
-      geaendertVon        :  MANDATORY  TEXT*100;
-      geaendertAm         :  MANDATORY  XMLDateTime;
-      Bemerkung           :             MTEXT*1000;
-      Geometrie           :  MANDATORY  Linie;
+      erfasstVon    :  MANDATORY  TEXT*100;
+      erfasstAm     :  MANDATORY  XMLDateTime;
+      geaendertVon  :  MANDATORY  TEXT*100;
+      geaendertAm   :  MANDATORY  XMLDateTime;
+      Bemerkung     :             MTEXT*1000;
+      Geometrie     :  MANDATORY  Linie;
     END Stockgrenze;
 
     ASSOCIATION Waldgrenze__Stockgrenze =
-      rWaldgrenze   --  {0..1}  Waldgrenze;  !! Die Datenerfassung erfolgt z.T. "von unten", also von der Stockgrenze her. Deshalb kann der Bezug zur Waldgrenze noch fehlen.
+      rWaldgrenze   --  {0..1}  Waldgrenze;
       rStockgrenze  --  {0..1}  Stockgrenze;
     END Waldgrenze__Stockgrenze;
 
@@ -132,16 +129,6 @@ MODEL SZ_Waldfeststellungen_V2 (de)
       rVerbindlichkeit (EXTERNAL)  --  {1}     SZ_Waldfeststellungen_V2.Stammdaten.Verbindlichkeit;
       rWaldgrenze                  --  {0..*}  Waldgrenze;
     END Verbindlichkeit__Waldgrenze;
-
-    ASSOCIATION Begruendungsverfahren__Waldgrenze =
-      rBegruendung (EXTERNAL)  --  {0..1}  SZ_Verfahren_Waldrecht_V1.Fachdaten.Waldfeststellung;
-      rWaldgrenze              --  {0..*}  Waldgrenze;
-    END Begruendungsverfahren__Waldgrenze;
-
-    ASSOCIATION Aufhebungsverfahren__Waldgrenze =
-      rAufhebung (EXTERNAL)  --  {0..1}  SZ_Verfahren_Waldrecht_V1.Fachdaten.Waldfeststellung;
-      rWaldgrenze            --  {0..*}  Waldgrenze;
-    END Aufhebungsverfahren__Waldgrenze;
 
   END Fachdaten;
 

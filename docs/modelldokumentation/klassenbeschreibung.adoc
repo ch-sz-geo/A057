@@ -110,14 +110,6 @@ m| geaendertAm
 | Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
 | 2024-07-30T08:07:57
 | intern
-m| gueltigVon
-| Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2024-01-01
-| öffentlich
-m| gueltigBis
-| Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2030-12-31
-| öffentlich
 m| Waldabstand
 | Distanz von Bauten und Anlagen zur statischen Waldgrenze in Meter. Im Normalfall 15.
 | 15
@@ -141,6 +133,15 @@ m| Aufhebungsverfahren
 m| Bemerkung
 | öffentliche Bemerkung zum Objekt
 | Das ist eine öffentliche Bemerkung
+| öffentlich
+4+| *Beziehungsattribute*
+m| rTyp
+| Fremdschlüssel zum Typ, welcher der Waldgrenze zugeordnet ist.
+| e1a6fbe3-9598-4620-93f0-7ae8e5f89c68
+| öffentlich
+m| rVerbindlichkeit
+| Fremdschlüssel zur Verbindlichkeit, welche der Waldgrenze zugeordnet ist.
+| 8f191c7e-66e7-4052-a5df-8692c8bd0c63
 | öffentlich
 4+| *Geometrie*
 m| Geometrie
@@ -178,6 +179,11 @@ m| Bemerkung
 | Bemerkung zum Objekt
 | Das ist eine Bemerkung
 | öffentlich
+4+| *Beziehungsattribute*
+m| rWaldgrenze
+| Fremdschlüssel zur Waldgrenze, welche dem Wirkbereich zugeordnet ist.
+| 458183d2-554b-4f5a-b6b6-282285c925b9
+| öffentlich
 4+| *Geometrie*
 m| Geometrie
 | Geometrie des Wirkbereichs als Fläche
@@ -213,6 +219,11 @@ m| geaendertAm
 m| Bemerkung
 | Bemerkung zum Objekt
 | Das ist eine Bemerkung
+| öffentlich
+4+| *Beziehungsattribute*
+m| rWaldgrenze
+| Fremdschlüssel zur Waldgrenze, welche der Stockgrenze zugeordnet ist.
+| 458183d2-554b-4f5a-b6b6-282285c925b9
 | öffentlich
 4+| *Geometrie*
 m| Geometrie

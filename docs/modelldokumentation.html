@@ -285,7 +285,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-09-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-11-25</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -751,18 +751,6 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2030-12-31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Waldabstand</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Distanz von Bauten und Anlagen zur statischen Waldgrenze in Meter. Im Normalfall 15.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
@@ -796,6 +784,21 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rTyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Typ, welcher der Waldgrenze zugeordnet ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e1a6fbe3-9598-4620-93f0-7ae8e5f89c68</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rVerbindlichkeit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Verbindlichkeit, welche der Waldgrenze zugeordnet ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8f191c7e-66e7-4052-a5df-8692c8bd0c63</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
@@ -868,6 +871,15 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rWaldgrenze</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Waldgrenze, welche dem Wirkbereich zugeordnet ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">458183d2-554b-4f5a-b6b6-282285c925b9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
@@ -934,6 +946,15 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung zum Objekt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rWaldgrenze</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Waldgrenze, welche der Stockgrenze zugeordnet ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">458183d2-554b-4f5a-b6b6-282285c925b9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
@@ -1462,7 +1483,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-12 05:58:50 UTC
+Last updated 2024-11-25 07:34:36 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

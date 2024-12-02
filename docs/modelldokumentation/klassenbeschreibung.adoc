@@ -91,9 +91,9 @@ Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 Die Klasse `+Waldgrenze+` führt die statisch festgelegten Waldgrenzen als Linien. In Abhängigkeit ihres Typs und des Rechtsstatus gelangen diese Objekte auch in den ÖREB-Kataster.
 Das Legendensymbol sieht so aus:
 
-image::data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkAgMAAABXtZT1AAAACVBMVEX85+f55eX34+NzYKpjAAAAA3RSTlPAgkFjt9lRAAAAHElEQVQokWOYGooGwhgcGNAA46jQqBC9hTATJgB9rhUZ7JHTEgAAAABJRU5ErkJggg==
-
+++++
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkAgMAAABXtZT1AAAACVBMVEX85+f55eX34+NzYKpjAAAAA3RSTlPAgkFjt9lRAAAAHElEQVQokWOYGooGwhgcGNAA46jQqBC9hTATJgB9rhUZ7JHTEgAAAABJRU5ErkJggg==">
+++++
 
 [cols=4*,options="header"]
 |===

@@ -50,7 +50,6 @@ m|Name
 Über den Typ wird die Art der Geometrie festgelegt.
 
 In der Klasse `+Typ+` wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.
-
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
@@ -89,12 +88,6 @@ Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
 ==== Klasse `+Waldgrenze+`
 Die Klasse `+Waldgrenze+` führt die statisch festgelegten Waldgrenzen als Linien. In Abhängigkeit ihres Typs und des Rechtsstatus gelangen diese Objekte auch in den ÖREB-Kataster.
-Das Legendensymbol sieht so aus:
-
-++++
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkAgMAAABXtZT1AAAACVBMVEX85+f55eX34+NzYKpjAAAAA3RSTlPAgkFjt9lRAAAAHElEQVQokWOYGooGwhgcGNAA46jQqBC9hTATJgB9rhUZ7JHTEgAAAABJRU5ErkJggg==">
-++++
-
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe

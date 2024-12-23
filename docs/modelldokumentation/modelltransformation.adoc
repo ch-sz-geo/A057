@@ -29,14 +29,17 @@
 Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
 |===
 h| Regel h| Rechtsstatus
-a| (`+Waldgrenze.gueltigVon+` IS NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NULL AND `+Waldgrenze.rAufhebung+` IS NULL)
-
-OR
-
-(`+Waldgrenze.gueltigVon+` IS NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NULL AND `+Waldgrenze.rAufhebung+` IS NOT NULL) | `+laufendeAenderung_Begruendung+`
-| `+Waldgrenze.gueltigVon+` IS NOT NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NOT NULL AND `+Waldgrenze.rAufhebung+` IS NULL | `+inKraft+`
-| `+Waldgrenze.gueltigVon+` IS NOT NULL AND `+Waldgrenze.gueltigBis+` IS NULL AND `+Waldgrenze.rBegruendung+` IS NOT NULL AND `+Waldgrenze.rAufhebung+` IS NOT NULL | `+laufendeAenderung_Aufhebung+`
-| `+Waldgrenze.gueltigVon+` IS NOT NULL AND `+Waldgrenze.gueltigBis+` IS NOT NULL AND `+Waldgrenze.rBegruendung+` IS NOT NULL AND `+Waldgrenze.rAufhebung+` IS NOT NULL | `+inKraft_Aufhebung+`
+a| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
+Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
+| `+laufendeAenderung_Begruendung+`
+| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
+Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen. | `+inKraft+`
+| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
+Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
+| `+laufendeAenderung_Aufhebung+`
+| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
+Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen.
+| `+inKraft_Aufhebung+`
 |===
 
 ==== Klasse `+Geometrie+`

@@ -23,7 +23,7 @@ INTERLIS 2.3;
 !! 2016-10-26 |  -  | Kep | Erstfassung
 !!==============================================================================
 MODEL SZ_Waldfeststellungen_V2 (de)
-  AT "http://models.geo.sz.ch"
+  AT "https://models.geo.sz.ch"
   VERSION "2023-09-08" =
 
   IMPORTS UNQUALIFIED INTERLIS;

@@ -13,9 +13,7 @@ Die Abbildungsregeln zur Überführung ins Bundemodell sind noch zu erstellen.
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| todo: kontrollieren
-
-`+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
+| `+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
 | `+VerweisWMS+`
 |===
 

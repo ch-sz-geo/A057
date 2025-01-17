@@ -10,7 +10,7 @@ Dieses Modell beinhaltet die Daten zu:
 * *Waldgrenze*
 * *Wirkbereiche der Waldgrenzen*
 
-Die Datensätze *Stockgrenze* (A010) und *Waldgrenze" (A053) wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema "Waldfeststellung" zusammengefasst.
+Die Datensätze *Stockgrenze* (A010) und *Waldgrenze* (A053) wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema *Waldfeststellung* (A057) zusammengefasst.
 
 ifdef::backend-pdf[]
 <<<

@@ -71,7 +71,7 @@ m| geaendertVon
 m| geaendertAm
 |  fix: 1900-01-01T12:00:00
 m| Bemerkung
-| [1]: Bemerkunge
+| [1]: Bemerkungen
 2+| *Beziehungsattribute*
 m| rWaldgrenze
 | [1]: rLinie

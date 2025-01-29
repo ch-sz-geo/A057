@@ -1,3 +1,9 @@
 = Dateibeschreibung
 
-* *<Dateiname>:* Diese Datei enthält <zu ergänzen>.
+[cols=*,options="header"]
+|===
+| Dateiname | Beschreibung | Modell (Version)
+| *Stammdaten_2000-01-01.xtf*
+| Diese Datei enthält die Stammdaten für die Datenerfassung nach dem rechts aufgeführten Datenmodell.
+| SZ_Waldfeststellungen_V2 (2023-09-08)
+|===

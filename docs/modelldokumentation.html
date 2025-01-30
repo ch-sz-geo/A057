@@ -285,7 +285,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2025-01-29</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-01-30</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -493,7 +493,10 @@ Christoph Angst (Cha), AWN</p></td>
 </ul>
 </div>
 <div class="paragraph">
-<p>Die Datensätze <strong>Stockgrenze</strong> (A010) und <strong>Waldgrenze</strong> (A053) wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema <strong>Waldfeststellung</strong> (A057) zusammengefasst.</p>
+<p>Die Datensätze <strong>Stockgrenze</strong> (A010) und <strong>Waldgrenze</strong> (A053) wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema <strong>Waldfeststellung</strong> (A057) zusammengefasst. Von den verschiedenen Klassen des Themas <strong>Waldfeststellung</strong> (A057) ist einzig die Bearbeitung der Klasse <code>Waldgrenze</code> an ein Verfahren gebunden. Dies dahingehend, dass Anpassungen an der Waldgrenzgeometrie im Normalfall über ein <strong>Waldfeststellungsverfahren</strong> erfolgen. Die Informationen zum Waldfeststellungsverfahren sind im separaten Thema <a href="https://ch-sz-geo.github.io/A241/">"Verfahren Waldrecht" (A241)</a> beschrieben.</p>
+</div>
+<div class="paragraph">
+<p>Die Verknüpfung der Geometrie (Thema "Waldfeststellung" A057) mit dem ihr zugrundeliegendem Verfahren (Thema "Verfahren Waldrecht" A241) erfolgt über eine lose Kopplung mit Hilfe zweier Fremdschlüssel auf der Klasse <code>Waldfeststellung</code>.</p>
 </div>
 </div>
 </div>
@@ -1448,7 +1451,7 @@ Zudem darf der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-01-29 10:14:39 UTC
+Last updated 2025-01-30 08:10:07 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

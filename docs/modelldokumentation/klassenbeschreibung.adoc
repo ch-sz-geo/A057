@@ -151,6 +151,37 @@ m| Geometrie
 | öffentlich
 |===
 
+Änderungen an Waldgrenzen efolgen über ein Waldfeststellungsverfahren. Das Waldfeststellungsverfahren durchläuft verschiedene Phasen, welche den Rechtsstatus der Waldgrenze bestimmen. Damit wird der Rechtsstatus einer Waldgrenze NICHT über ein Attribut der Klasse `+Waldgrenze+` festgehalten, sondern regelbasiert über den Verfahrensstand hergeleitet. Es gilt:
+
+Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
+|===
+h| Regel h| Rechtsstatus
+a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
+* `+Waldgrenze.Aufhebungsverfahren+` ist leer und +
+* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist nicht: +
+** "abgeschlossen" oder +
+** "abgeschlossen_ohne_Verfuegung" oder +
+** "unbekannt"
+| `+laufende_Aenderung_Begruendung+`
+a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
+* `+Waldgrenze.Aufhebungsverfahren+` ist leer und +
+* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist : +
+** "abgeschlossen"
+| `+in_Kraft_Begruendung+`
+a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
+* `+Waldgrenze.Aufhebungsverfahren+` hat einen Wert und +
+* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist nicht: +
+** "abgeschlossen" oder +
+** "abgeschlossen_ohne_Verfuegung" oder +
+** "unbekannt"
+| `+laufende_Aenderung_Aufhebung+`
+a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
+* `+Waldgrenze.Aufhebungsverfahren+` hat einen Wert und +
+* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist : +
+** "abgeschlossen"
+| `+in_Kraft_Aufhebung+`
+|===
+
 ==== Klasse `+Wirkbereich+`
 Wirkbereiche sind Flächen entlang von statischen Waldgrenzen, in denen ein Bauverbot gilt. Die Wirkbereiche wurden eingeführt, damit der ÖREB-Katasterauszug korrekte Resultate ausweist. Eine statische Waldgrenze kanpp ausserhalb eines Grundstückes wird nur über den Verschnitt mit dem Wirkbereich korrekt als Eigentumsbeschränkung erkannt, nicht aber mit der Liniengeometrie.
 [cols=4*,options="header"]

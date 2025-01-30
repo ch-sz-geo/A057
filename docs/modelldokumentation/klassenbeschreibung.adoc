@@ -151,35 +151,29 @@ m| Geometrie
 | öffentlich
 |===
 
-Änderungen an Waldgrenzen efolgen über ein Waldfeststellungsverfahren. Das Waldfeststellungsverfahren durchläuft verschiedene Phasen, welche den Rechtsstatus der Waldgrenze bestimmen. Damit wird der Rechtsstatus einer Waldgrenze NICHT über ein Attribut der Klasse `+Waldgrenze+` festgehalten, sondern regelbasiert über den Verfahrensstand hergeleitet. Es gilt:
+Änderungen an Waldgrenzen efolgen über ein Waldfeststellungsverfahren. Das Waldfeststellungsverfahren durchläuft verschiedene Phasen, welche über den `+Verfahrensstatus+` unterschieden werden. Die Zuordnung des Verfahrens in Kombination mit dem Verfahrensstatus bestimmt den Rechtsstatus der Waldgrenze. Das Regelwerk ist in der nachfolgenden Entscheidungstabelle zusammengestellt.
 
-Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
+image::../img/ETAB_Rechtsstatus.jpg[]
+
+Die Verfahrensstatus werden gruppiert und zu Typen zusammengefasst. Es gilt:
+
+[cols=3,options="header"]
 |===
-h| Regel h| Rechtsstatus
-a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
-* `+Waldgrenze.Aufhebungsverfahren+` ist leer und +
-* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist nicht: +
-** "abgeschlossen" oder +
-** "abgeschlossen_ohne_Verfuegung" oder +
-** "unbekannt"
-| `+laufende_Aenderung_Begruendung+`
-a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
-* `+Waldgrenze.Aufhebungsverfahren+` ist leer und +
-* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist : +
-** "abgeschlossen"
-| `+in_Kraft_Begruendung+`
-a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
-* `+Waldgrenze.Aufhebungsverfahren+` hat einen Wert und +
-* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist nicht: +
-** "abgeschlossen" oder +
-** "abgeschlossen_ohne_Verfuegung" oder +
-** "unbekannt"
-| `+laufende_Aenderung_Aufhebung+`
-a| * `+Waldgrenze.Begruendungsverfahren+` hat einen Wert und +
-* `+Waldgrenze.Aufhebungsverfahren+` hat einen Wert und +
-* `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) ist : +
-** "abgeschlossen"
-| `+in_Kraft_Aufhebung+`
+| Typ | Beschreibung | Verfahrensstatus (Code)
+| 1
+| Alle Verfahrensstatus, welche nicht oder noch nicht publiziert werden dürfen.
+| * eingeleitet +
+* abgeschlossen_ohne_Verfuegung +
+* unbekannt
+| 2
+| Alle Verfahrensstatus, welche dazu führen, die Daten zu veröffentlichen und zugleich anzeigen, dass eine Änderung im Gang ist.
+| * inOeffentlicherAuflage +
+* inEinsprachebehandlung + 
+* Verfuegung_versandt +
+* inBeschwerdebehandlung
+| 3
+| Alle Verfahrensstatus, bei denen das Verfahren nach normalem Verlauf abgeschlossen wurde.
+| * abgeschlossen
 |===
 
 ==== Klasse `+Wirkbereich+`

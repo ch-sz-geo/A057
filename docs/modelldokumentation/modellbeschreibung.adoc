@@ -10,7 +10,9 @@ Dieses Modell beinhaltet die Daten zu:
 * *Waldgrenze*
 * *Wirkbereiche der Waldgrenzen*
 
-Die Datensätze *Stockgrenze* (A010) und *Waldgrenze* (A053) wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema *Waldfeststellung* (A057) zusammengefasst.
+Die Datensätze *Stockgrenze* (A010) und *Waldgrenze* (A053) wurden bislang in separaten Datenmodellen beschrieben. Neu sind sie im Thema *Waldfeststellung* (A057) zusammengefasst. Von den verschiedenen Klassen des Themas *Waldfeststellung* (A057) ist einzig die Bearbeitung der Klasse `+Waldgrenze+` an ein Verfahren gebunden. Dies dahingehend, dass Anpassungen an der Waldgrenzgeometrie im Normalfall über ein *Waldfeststellungsverfahren* erfolgen. Die Informationen zum Waldfeststellungsverfahren sind im separaten Thema https://ch-sz-geo.github.io/A241/["Verfahren Waldrecht" (A241)] beschrieben.
+
+Die Verknüpfung der Geometrie (Thema "Waldfeststellung" A057) mit dem ihr zugrundeliegendem Verfahren (Thema "Verfahren Waldrecht" A241) erfolgt über eine lose Kopplung mit Hilfe zweier Fremdschlüssel auf der Klasse `+Waldfeststellung+`.
 
 ifdef::backend-pdf[]
 <<<

@@ -812,6 +812,128 @@ Christoph Angst (Cha), AWN</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Änderungen an Waldgrenzen efolgen über ein Waldfeststellungsverfahren. Das Waldfeststellungsverfahren durchläuft verschiedene Phasen, welche den Rechtsstatus der Waldgrenze bestimmen. Damit wird der Rechtsstatus einer Waldgrenze NICHT über ein Attribut der Klasse <code>Waldgrenze</code> festgehalten, sondern regelbasiert über den Verfahrensstand hergeleitet. Es gilt:</p>
+</div>
+<div class="paragraph">
+<p>Regeln für die Ableitung des Wertes für <code>Rechtsstatus</code>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Regel</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Rechtsstatus</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>Waldgrenze.Begruendungsverfahren</code> hat einen Wert und<br></p>
+</li>
+<li>
+<p><code>Waldgrenze.Aufhebungsverfahren</code> ist leer und<br></p>
+</li>
+<li>
+<p><code>Verfahrensstatus.Code</code> (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) ist nicht:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>"abgeschlossen" oder<br></p>
+</li>
+<li>
+<p>"abgeschlossen_ohne_Verfuegung" oder<br></p>
+</li>
+<li>
+<p>"unbekannt"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>laufende_Aenderung_Begruendung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>Waldgrenze.Begruendungsverfahren</code> hat einen Wert und<br></p>
+</li>
+<li>
+<p><code>Waldgrenze.Aufhebungsverfahren</code> ist leer und<br></p>
+</li>
+<li>
+<p><code>Verfahrensstatus.Code</code> (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) ist :<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>"abgeschlossen"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>in_Kraft_Begruendung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>Waldgrenze.Begruendungsverfahren</code> hat einen Wert und<br></p>
+</li>
+<li>
+<p><code>Waldgrenze.Aufhebungsverfahren</code> hat einen Wert und<br></p>
+</li>
+<li>
+<p><code>Verfahrensstatus.Code</code> (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) ist nicht:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>"abgeschlossen" oder<br></p>
+</li>
+<li>
+<p>"abgeschlossen_ohne_Verfuegung" oder<br></p>
+</li>
+<li>
+<p>"unbekannt"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>laufende_Aenderung_Aufhebung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>Waldgrenze.Begruendungsverfahren</code> hat einen Wert und<br></p>
+</li>
+<li>
+<p><code>Waldgrenze.Aufhebungsverfahren</code> hat einen Wert und<br></p>
+</li>
+<li>
+<p><code>Verfahrensstatus.Code</code> (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) ist :<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>"abgeschlossen"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>in_Kraft_Aufhebung</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_klasse_wirkbereich"><a class="anchor" href="#_klasse_wirkbereich"></a><a class="link" href="#_klasse_wirkbereich">4.2.2. Klasse <code>Wirkbereich</code></a></h4>
@@ -1451,7 +1573,7 @@ Zudem darf der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-01-30 08:10:07 UTC
+Last updated 2025-01-30 10:31:58 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

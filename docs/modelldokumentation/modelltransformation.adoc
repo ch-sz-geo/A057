@@ -1,9 +1,94 @@
 == Modelltransformationen
 === Transformation ins minimale Geodatenmodell des Bundes
-* Quellmodell: Das hier beschriebene Datenmodell
+* Quellmodell: Es werden Daten aus zwei Modellen verwendet:
+** Das hier beschriebene Datenmodell
+** Das Datenmodell des Themas https://ch-sz-geo.github.io/A241/["Verfahren Waldrecht"]
 * Zielmodell: http://models.geo.admin.ch/BAFU/Waldgrenzen_V1_2.ili[Waldgrenzen_V1_2] (Version: 2023-03-20)
 
-Die Abbildungsregeln zur Überführung ins Bundemodell sind noch zu erstellen.
+==== Allgemeines
+Die Klassen `+Wirkbereich+` und `+Stockgrenze+` sind nicht Teil des Zielmodells. Sie bleiben daher unberücksichtigt.
+
+In den nachfolgenden Tabellen werden die Quellattribute des Modells aus "Verfahren Waldrecht" vollständig qualifiziert; also mit der Angabe von Modell, Topic, Klasse und Attribut. Die Quellattribute aus dem vorliegenden Thema werden einfach qualifiziert; also nur mit der Angabe von Klasse und Attribut.
+
+==== Klasse `+Dokument+`
+Die Klasse `+Dokument+` wird nicht abgefüllt und bleibt leer. Auf eine Beschreibung wird daher verzichtet.
+
+==== Klasse `+Typ+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Waldfeststellung.Verfuegungsnummer+`
+| `+Code+`
+| `+Typ.Name+`
+| `+Bezeichnung+`
+| `+Typ.Abkuerzung+`
+| `+Abkuerzung+`
+| `+Verbindlichkeit.Code+` +
+hergeleitet über: `+rVerbindlichkeit.rVerbindlichkeit+`
+| `+Verbindlichkeit+`
+| `+Typ.Bemerkung+`
+| `+Bemerkungen+`
+| `+Typ.Code+`
+| `+Art+`
+| `+Typ.Symbol+`
+| `+Symbol+`
+|===
+
+==== Klasse `+Waldgrenze_Linie+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+Waldgrenze.Geometrie+`
+| `+Geometrie+`
+| Datum, an dem die Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt
+| `+publiziertAb+`
+| `+NULL+`
+| `+publiziertBis+`
+| berechneter Wert gemäss den Regeln analog der Transformation ins Transfermodell ÖREB-Kataster (siehe unten)
+| `+Rechtsstatus+`
+| `+Typ.Bemerkung+`
+| `+Bemerkungen+`
+|===
+
+==== Klasse `+Amt+`
+Der Eintrag dieser Klasse ist fix vorgegeben und https://data.geo.sz.ch/public/Themen/A094b/[hier] publiziert.
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| Amt für Wald und Natur (AWN)
+| `+Name+`
+| https://www.sz.ch/wald
+| `+AmtImWeb+`
+| CHE116013925
+| `+UID+`
+| Postfach 1184
+| `+Zeile1+`
+| `+NULL+`
+| `+Zeile2+`
+| Bahnhofstrasse
+| `+Strasse+`
+| 9
+| `+Hausnr+`
+| 6431
+| `+PLZ+`
+| Schwyz
+| `+Ort+`
+|===
+
+==== Klasse `+Datenbestand+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+ch.sz.a053b.geobasisdaten.sz+` +
+Muss mit der ID des Baskets (BID) übereinstimmen
+| `+BasketID+`
+| berechneter Wert`<todo>
+| `+Stand+`
+| Datum, an dem die Daten Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt
+| `+Lieferdatum+`
+| `+NULL+
+| `+Bemerkungen+`
+|===
 
 === Transformation ins Transfermodell ÖREB-Kataster
 * Quellmodell: Das hier beschriebene Datenmodell
@@ -26,7 +111,7 @@ Die Abbildungsregeln zur Überführung ins Bundemodell sind noch zu erstellen.
 | (aktuell nicht verwendet und daher leer) m| publiziertBis
 |===
 
-Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
+Regeln für die Bestimmung des Wertes für `+Rechtsstatus+`:
 |===
 h| Regel h| Rechtsstatus +
 (siehe https://models.geo.admin.ch/V_D/OeREB/OeREBKRM_V2_0_Texte.xml[hier])

@@ -51,7 +51,7 @@ hergeleitet über: `+rVerbindlichkeit.rVerbindlichkeit+`
 |===
 
 ==== Klasse `+Amt+`
-Der Eintrag dieser Klasse ist fix vorgegeben und https://data.geo.sz.ch/public/Themen/A094b/[hier] publiziert.
+Der Eintrag dieser Klasse ist fix vorgegeben und https://data.geo.sz.ch/public/Themen/A094b/[hier] publiziert. Es gelten folgende Werte:
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
@@ -79,12 +79,13 @@ Der Eintrag dieser Klasse ist fix vorgegeben und https://data.geo.sz.ch/public/T
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| `+ch.sz.a053b.geobasisdaten.sz+` +
-Muss mit der ID des Baskets (BID) übereinstimmen
+| fix: `+ch.sz.a053b.geobasisdaten.sz+` +
+Muss mit der ID des Baskets (BID) von `+Waldgrenzen_V1_2.Geobasisdaten+` übereinstimmen
 | `+BasketID+`
-| berechneter Wert`<todo>
+| berechneter Wert +
+Berechnung: MAX(`+Waldgrenze.geaendertAm+`
 | `+Stand+`
-| Datum, an dem die Daten Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt
+| Datum, an dem die Daten ins Bundesmodell überführt werden; wird durch den Publikationsprozess gesetzt
 | `+Lieferdatum+`
 | `+NULL+
 | `+Bemerkungen+`

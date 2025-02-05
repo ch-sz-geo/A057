@@ -17,21 +17,21 @@ Die Klasse `+Dokument+` wird nicht abgefüllt und bleibt leer. Auf eine Beschrei
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Waldfeststellung.Verfuegungsnummer+`
-| `+Code+`
-| `+Typ.Name+`
-| `+Bezeichnung+`
-| `+Typ.Abkuerzung+`
-| `+Abkuerzung+`
+m| SZ_Verfahren_Waldrecht_V1.Fachdaten.Waldfeststellung.Verfuegungsnummer
+m| Code
+m| Typ.Name
+m| Bezeichnung
+m| Typ.Abkuerzung
+m| Abkuerzung
 | `+Verbindlichkeit.Code+` +
 hergeleitet über: `+rVerbindlichkeit.rVerbindlichkeit+`
-| `+Verbindlichkeit+`
-| `+Typ.Bemerkung+`
-| `+Bemerkungen+`
-| `+Typ.Code+`
-| `+Art+`
-| `+Typ.Symbol+`
-| `+Symbol+`
+m| Verbindlichkeit
+m| Typ.Bemerkung
+m| Bemerkungen
+m| Typ.Code
+m| Art
+m| Typ.Symbol
+m| Symbol
 |===
 
 ==== Klasse `+Waldgrenze_Linie+`
@@ -83,11 +83,11 @@ Der Eintrag dieser Klasse ist fix vorgegeben und https://data.geo.sz.ch/public/T
 Muss mit der ID des Baskets (BID) von `+Waldgrenzen_V1_2.Geobasisdaten+` übereinstimmen
 | `+BasketID+`
 | berechneter Wert +
-Berechnung: MAX(`+Waldgrenze.geaendertAm+`
+Berechnung: MAX(`+Waldgrenze.geaendertAm+`)
 | `+Stand+`
 | Datum, an dem die Daten ins Bundesmodell überführt werden; wird durch den Publikationsprozess gesetzt
 | `+Lieferdatum+`
-| `+NULL+
+| `+NULL+`
 | `+Bemerkungen+`
 |===
 

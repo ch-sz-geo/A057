@@ -178,6 +178,33 @@ a| * `+inOeffentlicherAuflage+` +
 a| * `+abgeschlossen+`
 |===
 
+Weil der Wert von `+Rechtsstatus+` eine über Regeln hergeleitete Grösse ist, fehlt eine entsprechende Klasse im Datenmodell. Bis entschieden ist, wie mit dieser Situation umgegangen werden soll, werden die Werte in der nachfolgenden Tabelle festgehalten. Die Struktur folgt der Klasse `+Katalogeintrag+`:
+
+[cols=5*,options="header"]
+|===
+| OID | Code | Name | SortierNr | Bemerkung
+m| fad1a855-73f0-4246-bdb1-f75f0ae0a36d
+| laufendeAenderung_Begruendung
+| laufende Änderung (Begründung)
+| 1
+| Es ist eine Änderung im Gang, bei der eine Waldgrenze neu festgelegt werden soll.
+m| 4c04d2a6-c88a-46af-907a-435b56a18308
+| inKraft_Begruendung
+| in Kraft (Begründung)
+| 2
+| Der Begründungsentscheid ist in Kraft. Die Waldgrenze ist rechtskräftig festgelegt.
+m| 0443cd18-27b5-43ac-a595-2da25f59aadb
+| laufendeAenderung_Aufhebung
+| laufende Änderung (Aufhebung)
+| 3
+| Es ist eine Änderung im Gang, bei der eine bestehende Waldgrenze aufgehoben werden soll.
+m| e3e0f72f-7705-4e24-9090-94736b7da45a
+| inKraft_Aufhebung
+| in Kraft (Aufhebung)
+| 4
+| Der Aufhebungsentscheid ist in Kraft. Die Waldgrenze ist rechtskräftig aufgehoben.
+|===
+
 ==== Klasse `+Wirkbereich+`
 Wirkbereiche sind Flächen entlang von statischen Waldgrenzen, in denen ein Bauverbot gilt. Die Wirkbereiche wurden eingeführt, damit der ÖREB-Katasterauszug korrekte Resultate ausweist. Eine statische Waldgrenze kanpp ausserhalb eines Grundstückes wird nur über den Verschnitt mit dem Wirkbereich korrekt als Eigentumsbeschränkung erkannt, nicht aber mit der Liniengeometrie.
 [cols=4*,options="header"]

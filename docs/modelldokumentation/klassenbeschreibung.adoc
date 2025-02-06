@@ -151,11 +151,13 @@ m| Geometrie
 | öffentlich
 |===
 
-Änderungen an Waldgrenzen efolgen über ein Waldfeststellungsverfahren. Das Waldfeststellungsverfahren durchläuft verschiedene Phasen, welche über den `+Verfahrensstatus+` unterschieden werden. Die Zuordnung des Verfahrens in Kombination mit dem Verfahrensstatus bestimmt den Rechtsstatus der Waldgrenze. Das Regelwerk ist in der nachfolgenden Entscheidungstabelle zusammengestellt.
+Jede Waldgrenze hat einen Rechtsstatus. Dieses Merkmal ist jedoch nicht als Attribut auf der Klasse `+Waldgrenze+` aufgeführt, weil es aus der Kombination des Waldfeststellungsverfahrens und dessen Status abgeleitet werden kann (vgl. Entscheidungstabelle unten). Die Art des Waldfeststellungsverfahren (Begründung (B1) oder Aufhebung (B2)) ist ein erstes Entscheidungskriterium. Der Status, in welchem sich das Verfahren befindet (B3), ein weiteres. Einige Verfahrensstatus haben den gleichen Rechtsstatus zur Folge und werden zu Typen gleicher Auswirkung gruppiert (Typ 1 bis Typ 3) (vgl. Tabelle weiter unten).
+
+Das Regelwerk, wie der Rechtsstatus aus der Verfahrensart und dem Verfahrensstatus abgeleitet werden kann, ist in der nachfolgenden Entscheidungstabelle zusammengestellt.
 
 image::../img/ETAB_Rechtsstatus.jpg[]
 
-Die Verfahrensstatus werden gruppiert und zu Typen zusammengefasst. Es gilt:
+Die Typen der Verfahrensstatus sind:
 
 [cols=3,options="header"]
 |===

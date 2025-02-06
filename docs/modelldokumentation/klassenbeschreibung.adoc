@@ -162,18 +162,18 @@ Die Verfahrensstatus werden gruppiert und zu Typen zusammengefasst. Es gilt:
 | Typ | Beschreibung | Verfahrensstatus (Code)
 | 1
 | Alle Verfahrensstatus, welche nicht oder noch nicht publiziert werden dürfen.
-| * eingeleitet +
-* abgeschlossen_ohne_Verfuegung +
-* unbekannt
+a| * `+eingeleitet+` +
+* `+abgeschlossen_ohne_Verfuegung+` +
+* `+unbekannt+`
 | 2
 | Alle Verfahrensstatus, welche dazu führen, die Daten zu veröffentlichen und zugleich anzeigen, dass eine Änderung im Gang ist.
-| * inOeffentlicherAuflage +
-* inEinsprachebehandlung + 
-* Verfuegung_versandt +
-* inBeschwerdebehandlung
+a| * `+inOeffentlicherAuflage+` +
+* `+inEinsprachebehandlung+` + 
+* `+Verfuegung_versandt+` +
+* `+inBeschwerdebehandlung+`
 | 3
 | Alle Verfahrensstatus, bei denen das Verfahren nach normalem Verlauf abgeschlossen wurde.
-| * abgeschlossen
+a| * `+abgeschlossen+`
 |===
 
 ==== Klasse `+Wirkbereich+`
@@ -258,9 +258,9 @@ m| Geometrie
 | öffentlich
 4+| *Datenqualität*
 2+| *Regel* 2+| *Erläuterung*
-2+| - Zu jeder Stockgrenze ist genau eine Waldgrenze zugeordnet
+2+| Zu jeder Stockgrenze ist genau eine Waldgrenze zugeordnet
 2+| Bei der Datenerfassen werden die Stockgrenzen häufig sehr früh erfasst. Die Digitalisierung der Waldgrenzen erfolgt zeitlich verzögert. Damit dies möglich wird, ist die Kardinalität der Rolle `rWaldgrenze` mit 0..1 deklariert. Gültig ist der Datensatz jedoch erst, wenn diese Regel erfüllt wird.
-2+| - Einer Waldgrenze kann, muss aber nicht, maximal eine Stockgrenze zugeordnet sein.
+2+| Einer Waldgrenze kann, muss aber nicht, maximal eine Stockgrenze zugeordnet sein.
 2+| Es gibt Fälle, bei denen eine Waldgrenze festgelegt wird, ohne dass vorgängig eine Stockgrenze bestimmt wurde.
 |===
 

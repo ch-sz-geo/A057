@@ -91,6 +91,41 @@ Berechnung: MAX(`+Waldgrenze.geaendertAm+`)
 | `+Bemerkungen+`
 |===
 
+=== Transformation ins Datenmodell der Stockgrenze
+* Quellmodell: Es werden Daten aus zwei Modellen verwendet:
+** Das hier beschriebene Datenmodell
+** Das Datenmodell des Themas https://ch-sz-geo.github.io/A241/["Verfahren Waldrecht"]
+* Zielmodell: http://models.geo.sz.ch/AWN/SZ_Stockgrenzen_2015-10-01_ili1.ili[SZStockgrenzen_20151001]
+
+==== Klasse `+Waldfeststellung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Waldfeststellung.Verfuegungsnummer+`
+| `+Verfuegung_Datum_Nr+`
+| `+SZ_VerfahrenWaldrecht_V2.Stammdaten.Gemeinde.Code+`
+| `+GdenrBfS+`
+a| Der Wert ist abhängig vom Rechtsstatus der zugeordneten Waldgrenze. Es gilt: +
+
+- `+rechtskraeftig+`, falls Rechtsstatus der Waldgrenze = `+inKraft+`
+- `+provisorisch+`, falls Rechtsstatus der Waldgrenze = `+AenderungOhneVorwirkung+`
+| `+Status+`
+| `+SZ_Waldfeststellungen_V2.Fachdaten.Stockgrenze.geaendertAm+`
+| `+Technischer_Eintrag+`
+| `+SZ_Waldfeststellungen_V2.Fachdaten.Stockgrenze.Bemerkung+`
+| `+Bemerkungen+`
+|===
+
+==== Klasse `+Stockgrenze+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| Die Transfer-ID von `+Waldfeststellung+`, welche der Stockgrenze zugeordnet ist 
+| `+Objekt_von+`
+| `+SZ_Waldfeststellungen_V2.Fachdaten.Stockgrenze.Geometrie+`
+| `+Geometrie+`
+|===
+
 === Transformation ins Transfermodell ÖREB-Kataster
 * Quellmodell: Das hier beschriebene Datenmodell
 * Zielmodell: https://models.geo.admin.ch/V_D/OeREB/OeREBKRMtrsfr_V2_0.ili[OeREBKRMtrsfr_V2_0] (Version: 2021-04-14)

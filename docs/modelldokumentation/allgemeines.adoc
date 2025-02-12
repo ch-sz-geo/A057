@@ -25,7 +25,9 @@ Vor der Zusammenlegung wurden die Daten in separaten Themen nachgeführt. Diese 
 * *Stockgrenzen (A010)* und
 * *Waldgrenzen A053)*
 
-Diese Themen bleiben bestehen und werden neu automatisch aufgrund der Änderungen im Thema *"Waldfeststellung"* nachgeführt. Analoges gilt für die Nachführung der Stockgrenzen im GeoShop und die der Waldgrenzen im ÖREB-Kataster.
+Diese Themen bleiben als eigenständige Produkte bestehen. Sie werden aus den Daten von "Verfahren Waldrecht (A241)" und "Waldfeststellung (A057)" nach jeder Änderung automatisch aktualisiert. Die folgende Abbildung zeigt die Modelltransformation schematisch:
+
+image::../img/Ableitung weiterer Themen.png[scaledwidth=50%]
 
 === Zielgruppen
 Dieses Dokument richtet sich an folgende Nutzergruppen:

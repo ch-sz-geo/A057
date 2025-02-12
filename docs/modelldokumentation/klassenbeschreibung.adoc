@@ -159,7 +159,7 @@ image::../img/ETAB_Rechtsstatus.jpg[]
 
 Die Typen der Verfahrensstatus sind:
 
-[cols="a,a,a",options="header"]
+[cols="10,2*",options="header"]
 |===
 | Typ | Beschreibung | Verfahrensstatus (Code)
 | 1

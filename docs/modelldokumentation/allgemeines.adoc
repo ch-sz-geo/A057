@@ -23,7 +23,7 @@ beschrieben.
 Vor der Zusammenlegung wurden die Daten in separaten Themen nachgeführt. Diese waren:
 
 * *Stockgrenzen (A010)* und
-* *Waldgrenzen A053)*
+* *Waldgrenzen (A053)*
 
 Diese Themen bleiben als eigenständige Produkte bestehen. Sie werden aus den Daten von "Verfahren Waldrecht (A241)" und "Waldfeststellung (A057)" nach jeder Änderung automatisch aktualisiert. Die folgende Abbildung zeigt die Modelltransformation schematisch:
 

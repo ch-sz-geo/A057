@@ -28,7 +28,11 @@ hergeleitet über: `+rVerbindlichkeit.rVerbindlichkeit+`
 m| Verbindlichkeit
 m| Typ.Bemerkung
 m| Bemerkungen
-m| Typ.Code
+a| `+Typ.Code+` +
+zu beachten: nur die nachfolgenden Codes werden überführt:
+
+- `+in_Bauzonen+`
+- `+ausserhalb_Bauzonen_statisch+`
 m| Art
 m| Typ.Symbol
 m| Symbol
@@ -105,7 +109,7 @@ Berechnung: MAX(`+Waldgrenze.geaendertAm+`)
 | `+Verfuegung_Datum_Nr+`
 | `+SZ_VerfahrenWaldrecht_V2.Stammdaten.Gemeinde.Code+`
 | `+GdenrBfS+`
-a| Der Wert ist abhängig vom Rechtsstatus der zugeordneten Waldgrenze. Es gilt: +
+a| Der Wert ist abhängig vom Rechtsstatus der zugeordneten Waldgrenze. Es gilt:
 
 - `+rechtskraeftig+`, falls Rechtsstatus der Waldgrenze = `+inKraft+`
 - `+provisorisch+`, falls Rechtsstatus der Waldgrenze = `+AenderungOhneVorwirkung+`
@@ -181,7 +185,7 @@ m| Waldgrenze.Geometrie m| Linie
 m| Typ.Symbol m| Symbol
 m| Typ.Name m| LegendeText
 m| Typ.Code m| ArtCode
-m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
+m| https://data.geo.sz.ch/public/Themen/A057b/[] m| ArtCodeliste
 | fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
 | - - - m| SubThema
 |===

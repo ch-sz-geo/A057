@@ -179,14 +179,15 @@ m| Waldgrenze.Geometrie m| Linie
 |===
 
 ==== Klasse `+LegendeEintrag+`
+Die Objekte der Klasse `+LegendeEintrag+` werden aus der Klasse `+Typ+` hergeleitet. Die Zuordnung, aus welchen Quellattributen die Zielattribute hergeleitet werden, ist grossmehrheitlich klar. Eine Ausnahme bildet das Attribut `+ArtCode+`. Die Typen der statischen Waldgrenzen haben keinen "Code"; weder als Vorgabe des Bundes in der entsprechenden Bundesmodelldokumentation noch bei der zuständigen kantonalen Fachstelle. Um keine fiktiven Daten einzuführen, wird deshalb der Wert aus dem Attribut `+Code+` verwendet. Es gilt zu beachten, dass sich der Wert für `+Code+` im kantonalen Datenmodell an INTERLIS-Domainbezeichnungen orientiert und daher weniger ein "Code" im Sinne einer Kurzform ist. Alternativ hätte der Wert von `+Abkuerzung+` als `+ArtCode+` verwendet werden können. Darauf wurde jedoch bewusst verzichtet, weil `+Abkuerzung+` kein Pflichtattribut ist. 
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
 m| Typ.Symbol m| Symbol
 m| Typ.Name m| LegendeText
 m| Typ.Code m| ArtCode
-m| https://data.geo.sz.ch/public/Themen/A057b/[] m| ArtCodeliste
-| fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
+| fix: `+https://data.geo.sz.ch/public/Themen/A057b/+` m| ArtCodeliste
+| fix: `+ch.StatischeWaldgrenzen+` m| Thema
 | - - - m| SubThema
 |===
 

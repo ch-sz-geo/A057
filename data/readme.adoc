@@ -1,5 +1,9 @@
 = Dateibeschreibung
 
+Die Datei `+Stammdaten.xtf+` enthält die Stammdaten. Alle Änderungen an dieser Datei werden dort vorgenommen und über GitHub mit einer eindeutigen Identifikationsnummer (Commit-Hash-ID) versehen. Mithilfe dieser ID können frühere Versionen der Datei jederzeit abgerufen werden.
+
+Die folgende Tabelle fasst die relevanten Versionen der Stammdaten zusammen:
+
 [cols=*,options="header"]
 |===
 | Dateiname | Beschreibung | Modell (Version) | aktuell

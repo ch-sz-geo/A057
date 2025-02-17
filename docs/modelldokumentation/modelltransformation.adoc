@@ -28,15 +28,29 @@ hergeleitet über: `+rVerbindlichkeit.rVerbindlichkeit+`
 m| Verbindlichkeit
 m| Typ.Bemerkung
 m| Bemerkungen
-a| `+Typ.Code+` +
-zu beachten: nur die nachfolgenden Codes werden überführt:
-
-- `+in_Bauzonen+`
-- `+ausserhalb_Bauzonen_statisch+`
+| `+Typ.Code+` +
+Es werden nicht alle Werte ins Bundesmodell überführt (vgl. Zuordnungstabelle unten)
 m| Art
 m| Typ.Symbol
 m| Symbol
 |===
+
+Das kantonale Modell kennt mehr Typen als im Bundesmodell vorgesehen sind. Bei der Überführung der kantonalen Daten ins Bundesmodell werden nur zwei Typen berücksichtigt (vgl. Zuordnungstabelle unten):
+
+[cols=2*,options="header"]
+|===
+| Typ Kanton (Code) | Typ Bund (Art_Waldgrenze)
+m| in_Bauzonen
+m| in_Bauzonen
+m| ausserhalb_Bauzonen_statisch
+m| ausserhalb_Bauzonen
+m| ausserhalb_Bauzonen_dynamisch
+m| - - -
+m| Waldgrenzwirkbereich
+m| - - -
+|===
+
+
 
 ==== Klasse `+Waldgrenze_Linie+`
 [cols=2*,options="header"]

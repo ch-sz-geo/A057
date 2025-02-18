@@ -17,8 +17,9 @@ Die Klasse `+Dokument+` wird nicht abgefüllt und bleibt leer. Auf eine Beschrei
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-m| SZ_Verfahren_Waldrecht_V1.Fachdaten.Waldfeststellung.Verfuegungsnummer
-m| Code
+m| Typ.Code
+| `+Code`+` +
+(Wertzuordnung siehe in Tabelle unten)
 m| Typ.Name
 m| Bezeichnung
 m| Typ.Abkuerzung

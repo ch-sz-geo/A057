@@ -18,8 +18,8 @@ Die Klasse `+Dokument+` wird nicht abgefüllt und bleibt leer. Auf eine Beschrei
 |===
 | Quellattribut | Zielattribut
 m| Typ.Code
-| `+Code`+` +
-(Wertzuordnung siehe in Tabelle unten)
+| `+Code+` +
+(Wertzuordnung siehe Tabelle unten)
 m| Typ.Name
 m| Bezeichnung
 m| Typ.Abkuerzung

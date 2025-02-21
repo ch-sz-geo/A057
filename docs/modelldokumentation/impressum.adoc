@@ -11,7 +11,7 @@
 | Themen-Nummer | A057
 | ID nach kGeoiV | 157 (Waldgrenze) +
 24-SZ (Stockgrenze)
-| Beteiligte | Kuno Epper (Kep), AGI + 
+| Beteiligte | {USER_NAME} Kuno Epper (Kep), AGI + 
 Christoph Angst (Cha), AWN
 | Status a| - [x] Entwurf 
 - [ ] bereit für Vernehmlassung

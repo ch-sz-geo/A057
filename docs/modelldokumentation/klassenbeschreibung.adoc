@@ -247,7 +247,7 @@ m| Geometrie
 |===
 
 ==== Klasse `+Stockgrenze+`
-Objekte der Klasse `+Stockgrenze+` erden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Strockgrenzen die Waldgrenzen abgeleitet. 
+Objekte der Klasse `+Stockgrenze+` werden in der Regel durch einen Geometer im Feld eingemessen und als Liniengeometrie der zuständigen Stelle übermittelt. Im Anschluss werden aus den Stockgrenzen die Waldgrenzen abgeleitet. 
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe

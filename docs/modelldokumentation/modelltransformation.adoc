@@ -229,7 +229,8 @@ Das WebGIS bezieht die Daten direkt aus der Datenbank. Aus diesem Grund wird nac
 | Quellattribut | Zielspalte
 | - - - | (Standardspalten gemäss den Angaben oben)
 | `+Typ.Code+` +
-hergeleitet über `+Waldgrenze.rTyp+` m| typ
+hergeleitet über `+Waldgrenze.rTyp+` +
+Es gelten die gleichen Abbildungsregeln wie bei der Überführung ins Bundesmodell (vgl. oben; Ausschluss dynamischer Waldgrenzen) m| typ
 | `+Typ.Name+` +
 hergeleitet über `+Waldgrenze.rTyp+` m| bezeichnung
 m| Waldgrenze.Geometrie m| geom
